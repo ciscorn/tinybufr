@@ -126,17 +126,42 @@ fn parse_sequence<R: Read>(
     tables: &Tables,
 ) -> Result<Sequence, Error> {
     let mut subset = Sequence::new();
+    let mut element_name_counts: std::collections::HashMap<String, usize> =
+        std::collections::HashMap::new();
+    let mut sequence_title_counts: std::collections::HashMap<String, usize> =
+        std::collections::HashMap::new();
+    let mut replication_count: usize = 0;
 
     loop {
         match data_reader.read_event()? {
             DataEvent::SubsetEnd | DataEvent::SequenceEnd | DataEvent::ReplicationItemEnd => break,
-            DataEvent::Data { idx, value, xy } => {
+            DataEvent::Data { value, xy, .. } => {
                 let Some(b) = tables.table_b.get(&xy) else {
                     return Err(Error::Fatal(format!("Unknown data descriptor: {:#?}", xy)));
                 };
+
+                // Track element name occurrences
+                let count = element_name_counts
+                    .entry(b.element_name.to_string())
+                    .or_insert(0);
+                *count += 1;
+
+                // Create the label with unit between name and counter
                 let label = match b.unit {
-                    "Numeric" => format!("{}: {}", idx, b.element_name),
-                    _ => format!("{}: {} ({})", idx, b.element_name, b.unit),
+                    "Numeric" => {
+                        if *count > 1 {
+                            format!("{} ({})", b.element_name, count)
+                        } else {
+                            b.element_name.to_string()
+                        }
+                    }
+                    _ => {
+                        if *count > 1 {
+                            format!("{} [{}] ({})", b.element_name, b.unit, count)
+                        } else {
+                            format!("{} [{}]", b.element_name, b.unit)
+                        }
+                    }
                 };
                 let value = match value {
                     tinybufr::Value::Missing => Value::Missing(()),
@@ -152,13 +177,33 @@ fn parse_sequence<R: Read>(
                 };
                 subset.insert(label, value);
             }
-            DataEvent::CompressedData { idx, xy, values } => {
+            DataEvent::CompressedData { xy, values, .. } => {
                 let Some(b) = tables.table_b.get(&xy) else {
                     return Err(Error::Fatal(format!("Unknown data descriptor: {:#?}", xy)));
                 };
+
+                // Track element name occurrences
+                let count = element_name_counts
+                    .entry(b.element_name.to_string())
+                    .or_insert(0);
+                *count += 1;
+
+                // Create the label with unit between name and counter
                 let label = match b.unit {
-                    "Numeric" => format!("{}: {}", idx, b.element_name),
-                    _ => format!("{}: {} ({})", idx, b.element_name, b.unit),
+                    "Numeric" => {
+                        if *count > 1 {
+                            format!("{} ({})", b.element_name, count)
+                        } else {
+                            b.element_name.to_string()
+                        }
+                    }
+                    _ => {
+                        if *count > 1 {
+                            format!("{} [{}] ({})", b.element_name, b.unit, count)
+                        } else {
+                            format!("{} [{}]", b.element_name, b.unit)
+                        }
+                    }
                 };
                 let vals: Vec<Value> = values
                     .into_iter()
@@ -177,19 +222,33 @@ fn parse_sequence<R: Read>(
                     .collect();
                 subset.insert(label, Value::CompressedData(vals));
             }
-            DataEvent::SequenceStart { idx, xy } => {
+            DataEvent::SequenceStart { xy, .. } => {
                 let Some(d) = tables.table_d.get(&xy) else {
                     return Err(Error::Fatal(format!(
                         "Unknown sequence descriptor: {:#?}",
                         xy
                     )));
                 };
-                let label = format!("{}: {}", idx, d.title);
+
+                // Track sequence title occurrences
+                let count = sequence_title_counts
+                    .entry(d.title.to_string())
+                    .or_insert(0);
+                *count += 1;
+
+                // Create the label with counter if duplicate
+                let label = if *count > 1 {
+                    format!("{} ({})", d.title, count)
+                } else {
+                    d.title.to_string()
+                };
+
                 let sequence = parse_sequence(data_reader, tables)?;
                 subset.insert(label, Value::Sequence(sequence));
             }
-            DataEvent::ReplicationStart { idx, .. } => {
-                let label = format!("{}", idx);
+            DataEvent::ReplicationStart { .. } => {
+                replication_count += 1;
+                let label = format!("replication:{}", replication_count);
                 let replication = parse_replication(data_reader, tables)?;
                 subset.insert(label, Value::Replication(replication));
             }
