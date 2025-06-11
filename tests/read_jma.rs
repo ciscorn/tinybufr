@@ -7,11 +7,11 @@ use tinybufr::*;
 #[test]
 fn test_amedas() {
     read_example(
-        "./tests/data/jma/Z__C_RJTD_20210918110000_OBS_AMDS_Rjp_N2_bufr4.bin",
+        "./tests/testdata/jma/Z__C_RJTD_20210918110000_OBS_AMDS_Rjp_N2_bufr4.bin",
         false,
     );
     read_example(
-        "./tests/data/jma/Z__C_RJTD_20210918110000_OBS_AMDSRR_Rjp_N1_bufr4.bin",
+        "./tests/testdata/jma/Z__C_RJTD_20210918110000_OBS_AMDSRR_Rjp_N1_bufr4.bin",
         false,
     );
 }
@@ -19,7 +19,7 @@ fn test_amedas() {
 #[test]
 fn test_wind_profiler() {
     read_example(
-        "./tests/data/jma/Z__C_RJTD_20200728040000_WPR_SEQ_RS-all_Pww_bufr4.bin",
+        "./tests/testdata/jma/Z__C_RJTD_20200728040000_WPR_SEQ_RS-all_Pww_bufr4.bin",
         false,
     );
 }
@@ -27,11 +27,11 @@ fn test_wind_profiler() {
 #[test]
 fn test_ryuikishisu() {
     read_example(
-        "./tests/data/jma/Z__C_RJTD_20230815070000_MET_SEQ_Ggis1km_Proi_Aper10min_RJsuikei830_ANAL_bufr4.bin",
+        "./tests/testdata/jma/Z__C_RJTD_20230815070000_MET_SEQ_Ggis1km_Proi_Aper10min_RJsuikei830_ANAL_bufr4.bin",
         false,
     );
     read_example(
-        "./tests/data/jma/Z__C_RJTD_20230815070000_MET_SEQ_Ggis1km_Proi_Fper10min_RJsuikei811_FH0010-0100_bufr4.bin",
+        "./tests/testdata/jma/Z__C_RJTD_20230815070000_MET_SEQ_Ggis1km_Proi_Fper10min_RJsuikei811_FH0010-0100_bufr4.bin",
         false,
     );
 }
@@ -39,20 +39,20 @@ fn test_ryuikishisu() {
 #[test]
 fn test_istc62() {
     read_example(
-        "./tests/data/jma/ISTC62_RJTD_310000_201707310002140_001_93839.bin",
+        "./tests/testdata/jma/ISTC62_RJTD_310000_201707310002140_001_93839.bin",
         true,
     );
 }
 
 #[test]
 fn test_istc82() {
-    read_example("./tests/data/jma/ISTC82.dat", true);
+    read_example("./tests/testdata/jma/ISTC82.dat", true);
 }
 
 #[test]
 fn test_ixac41() {
     read_example(
-        "./tests/data/jma/201806180758.20230110141530_520.BUFR",
+        "./tests/testdata/jma/201806180758.20230110141530_520.BUFR",
         false,
     );
 }

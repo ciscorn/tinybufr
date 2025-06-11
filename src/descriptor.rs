@@ -1,8 +1,9 @@
 //! Descriptors (FXY)
 
 use std::fmt::Debug;
+use std::io::Read;
 
-use binrw::BinRead;
+use byteorder::{BigEndian, ReadBytesExt};
 use serde::Serialize;
 
 use crate::{
@@ -11,17 +12,23 @@ use crate::{
 };
 
 /// Descriptor (FXY)
-#[derive(BinRead, Hash, Copy, Clone, Eq, PartialEq)]
+#[derive(Hash, Copy, Clone, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
-#[br(map = |x: u16| Descriptor {
-    f: (x >> 14) as u8,
-    x: ((x >> 8) & 0x3f) as u8,
-    y: (x & 0xff) as u8
-})]
 pub struct Descriptor {
     pub f: u8,
     pub x: u8,
     pub y: u8,
+}
+
+impl Descriptor {
+    pub fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let val = reader.read_u16::<BigEndian>()?;
+        Ok(Descriptor {
+            f: (val >> 14) as u8,
+            x: ((val >> 8) & 0x3f) as u8,
+            y: (val & 0xff) as u8,
+        })
+    }
 }
 
 impl Debug for Descriptor {

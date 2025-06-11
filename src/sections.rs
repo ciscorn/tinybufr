@@ -1,7 +1,8 @@
 //! The header sections of a BUFR file
 
-use binrw::{BinRead, BinReaderExt};
+use byteorder::{BigEndian, ReadBytesExt};
 use serde::Serialize;
+use std::io::Read;
 
 use crate::{Descriptor, Error};
 
@@ -16,14 +17,14 @@ pub struct HeaderSections {
 }
 
 impl HeaderSections {
-    pub fn read<R: BinReaderExt>(mut reader: R) -> Result<Self, Error> {
+    pub fn read<R: Read>(mut reader: R) -> Result<Self, Error> {
         // Indicator section
-        let indicator_section: IndicatorSection = reader.read_be()?;
+        let indicator_section = IndicatorSection::read(&mut reader)?;
 
         // Identification section
-        let identification_section: IdentificationSection = match indicator_section.edition_number {
-            3 => reader.read_be::<IdentificationSectionV3>()?.into(),
-            4 => reader.read_be::<IdentificationSection>()?,
+        let identification_section = match indicator_section.edition_number {
+            3 => IdentificationSectionV3::read(&mut reader)?.into(),
+            4 => IdentificationSection::read(&mut reader)?,
             _ => {
                 return Err(Error::Fatal(format!(
                     "Unsupported edition number {}",
@@ -33,14 +34,13 @@ impl HeaderSections {
         };
 
         // Optional section
-        let optional_section: Option<OptionalSection> =
-            match identification_section.flags.has_optional_section {
-                true => Some(reader.read_be()?),
-                false => None,
-            };
+        let optional_section = match identification_section.flags.has_optional_section {
+            true => Some(OptionalSection::read(&mut reader)?),
+            false => None,
+        };
 
         // Data description section
-        let data_description_section: DataDescriptionSection = reader.read_be()?;
+        let data_description_section = DataDescriptionSection::read(&mut reader)?;
 
         Ok(HeaderSections {
             indicator_section,
@@ -51,25 +51,43 @@ impl HeaderSections {
     }
 }
 
-fn three_bytes_to_u32(bytes: (u8, u8, u8)) -> u32 {
-    (bytes.0 as u32) << 16 | (bytes.1 as u32) << 8 | (bytes.2 as u32)
+fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
+    (bytes[0] as u32) << 16 | (bytes[1] as u32) << 8 | (bytes[2] as u32)
 }
 
 /// Indicator section (Section 0)
-#[derive(BinRead, Debug)]
+#[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
-#[brw(magic = b"BUFR")]
 pub struct IndicatorSection {
-    #[br(map = three_bytes_to_u32)]
     pub total_length: u32,
     pub edition_number: u8,
 }
 
+impl IndicatorSection {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut magic = [0u8; 4];
+        reader.read_exact(&mut magic)?;
+        if &magic != b"BUFR" {
+            return Err(Error::Fatal("Invalid magic number".to_string()));
+        }
+
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let total_length = three_bytes_to_u32(len_bytes);
+
+        let edition_number = reader.read_u8()?;
+
+        Ok(Self {
+            total_length,
+            edition_number,
+        })
+    }
+}
+
 /// Identification section (Section 1)
-#[derive(BinRead, Debug)]
+#[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
 pub struct IdentificationSection {
-    #[br(map = three_bytes_to_u32)]
     pub section_length: u32,
     pub master_table_number: u8,
     pub centre: u16,
@@ -87,14 +105,66 @@ pub struct IdentificationSection {
     pub typical_hour: u8,
     pub typical_minute: u8,
     pub typical_second: u8,
-    #[br(assert(section_length >= 22, "Identification section (BUFR4) length must be >= 22"))]
-    #[br(count = section_length - 22)]
     pub local_use: Vec<u8>,
 }
 
-#[derive(BinRead, Debug )]
+impl IdentificationSection {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        if section_length < 22 {
+            return Err(Error::Fatal(
+                "Identification section (BUFR4) length must be >= 22".to_string(),
+            ));
+        }
+
+        let master_table_number = reader.read_u8()?;
+        let centre = reader.read_u16::<BigEndian>()?;
+        let sub_centre = reader.read_u16::<BigEndian>()?;
+        let update_sequence_number = reader.read_u8()?;
+        let flags = IdentificationSectionFlags::read(reader)?;
+        let data_category = reader.read_u8()?;
+        let international_data_sub_category = reader.read_u8()?;
+        let local_data_sub_category = reader.read_u8()?;
+        let master_table_version = reader.read_u8()?;
+        let local_tables_version = reader.read_u8()?;
+        let typical_year = reader.read_u16::<BigEndian>()?;
+        let typical_month = reader.read_u8()?;
+        let typical_day = reader.read_u8()?;
+        let typical_hour = reader.read_u8()?;
+        let typical_minute = reader.read_u8()?;
+        let typical_second = reader.read_u8()?;
+
+        let mut local_use = vec![0u8; (section_length - 22) as usize];
+        reader.read_exact(&mut local_use)?;
+
+        Ok(Self {
+            section_length,
+            master_table_number,
+            centre,
+            sub_centre,
+            update_sequence_number,
+            flags,
+            data_category,
+            international_data_sub_category,
+            local_data_sub_category,
+            master_table_version,
+            local_tables_version,
+            typical_year,
+            typical_month,
+            typical_day,
+            typical_hour,
+            typical_minute,
+            typical_second,
+            local_use,
+        })
+    }
+}
+
+#[derive(Debug)]
 pub struct IdentificationSectionV3 {
-    #[br(map = three_bytes_to_u32)]
     pub section_length: u32,
     pub master_table_number: u8,
     pub sub_centre: u8,
@@ -110,9 +180,58 @@ pub struct IdentificationSectionV3 {
     pub typical_day: u8,
     pub typical_hour: u8,
     pub typical_minute: u8,
-    #[br(assert(section_length >= 17, "Identification section (BUFR3) length must be >= 17"))]
-    #[br(count = section_length - 17)]
     pub local_use: Vec<u8>,
+}
+
+impl IdentificationSectionV3 {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        if section_length < 17 {
+            return Err(Error::Fatal(
+                "Identification section (BUFR3) length must be >= 17".to_string(),
+            ));
+        }
+
+        let master_table_number = reader.read_u8()?;
+        let sub_centre = reader.read_u8()?;
+        let centre = reader.read_u8()?;
+        let update_sequence_number = reader.read_u8()?;
+        let flags = IdentificationSectionFlags::read(reader)?;
+        let data_category = reader.read_u8()?;
+        let data_sub_category = reader.read_u8()?;
+        let master_table_version = reader.read_u8()?;
+        let local_tables_version = reader.read_u8()?;
+        let typical_year = reader.read_u8()?;
+        let typical_month = reader.read_u8()?;
+        let typical_day = reader.read_u8()?;
+        let typical_hour = reader.read_u8()?;
+        let typical_minute = reader.read_u8()?;
+
+        let mut local_use = vec![0u8; (section_length - 17) as usize];
+        reader.read_exact(&mut local_use)?;
+
+        Ok(Self {
+            section_length,
+            master_table_number,
+            sub_centre,
+            centre,
+            update_sequence_number,
+            flags,
+            data_category,
+            data_sub_category,
+            master_table_version,
+            local_tables_version,
+            typical_year,
+            typical_month,
+            typical_day,
+            typical_hour,
+            typical_minute,
+            local_use,
+        })
+    }
 }
 
 impl From<IdentificationSectionV3> for IdentificationSection {
@@ -140,59 +259,123 @@ impl From<IdentificationSectionV3> for IdentificationSection {
     }
 }
 
-#[derive(BinRead, Debug, Default)]
+#[derive(Debug, Default)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
-#[br(map = |b: u8| 
-    Self {
-        has_optional_section: b & 0b10000000 != 0,
-    }
-)]
 pub struct IdentificationSectionFlags {
     pub has_optional_section: bool,
 }
 
+impl IdentificationSectionFlags {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let flags = reader.read_u8()?;
+        Ok(Self {
+            has_optional_section: flags & 0b10000000 != 0,
+        })
+    }
+}
+
 /// Optional section (Section 2)
-#[derive(BinRead, Debug)]
+#[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
 pub struct OptionalSection {
-    #[br(map = three_bytes_to_u32, pad_after = 1)]
     pub section_length: u32,
-    #[br(assert(section_length >= 4, "Optional section length must be >= 4"))]
-    #[br(count = section_length - 4)]
     pub optional: Vec<u8>,
 }
 
+impl OptionalSection {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        // Skip reserved byte
+        reader.read_u8()?;
+
+        if section_length < 4 {
+            return Err(Error::Fatal(
+                "Optional section length must be >= 4".to_string(),
+            ));
+        }
+
+        let mut optional = vec![0u8; (section_length - 4) as usize];
+        reader.read_exact(&mut optional)?;
+
+        Ok(Self {
+            section_length,
+            optional,
+        })
+    }
+}
+
 /// Data description section (Section 3)
-#[derive(BinRead, Debug)]
+#[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
 pub struct DataDescriptionSection {
-    #[br(map = three_bytes_to_u32, pad_after = 1)]
     pub section_length: u32,
     pub number_of_subsets: u16,
     pub flags: DataDescriptionSectionFlags,
-    #[br(assert(section_length >= 7, "Data description section length must be >= 7"))]
-    #[br(count = (section_length - 7) / 2)]
     pub descriptors: Vec<Descriptor>,
-    #[br(count = section_length as usize - 7 - (2 * descriptors.len()))]
     pub _padding: Vec<u8>,
 }
 
-#[derive(BinRead, Debug, Default)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
-#[br(map = |b: u8| {
-    Self {
-        is_observed_data: b & 0b10000000 != 0,
-        is_compressed: b & 0b01000000 != 0,
+impl DataDescriptionSection {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        // Skip reserved byte
+        reader.read_u8()?;
+
+        if section_length < 7 {
+            return Err(Error::Fatal(
+                "Data description section length must be >= 7".to_string(),
+            ));
+        }
+
+        let number_of_subsets = reader.read_u16::<BigEndian>()?;
+        let flags = DataDescriptionSectionFlags::read(reader)?;
+
+        let descriptor_count = ((section_length - 7) / 2) as usize;
+        let mut descriptors = Vec::with_capacity(descriptor_count);
+
+        for _ in 0..descriptor_count {
+            descriptors.push(Descriptor::read(reader)?);
+        }
+
+        let padding_len = section_length as usize - 7 - (2 * descriptors.len());
+        let mut padding = vec![0u8; padding_len];
+        reader.read_exact(&mut padding)?;
+
+        Ok(Self {
+            section_length,
+            number_of_subsets,
+            flags,
+            descriptors,
+            _padding: padding,
+        })
     }
-})]
+}
+
+#[derive(Debug, Default)]
+#[cfg_attr(feature = "serde", derive(Serialize))]
 pub struct DataDescriptionSectionFlags {
     pub is_observed_data: bool,
     pub is_compressed: bool,
 }
 
+impl DataDescriptionSectionFlags {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let flags = reader.read_u8()?;
+        Ok(Self {
+            is_observed_data: flags & 0b10000000 != 0,
+            is_compressed: flags & 0b01000000 != 0,
+        })
+    }
+}
+
 /// End section (Section 5)
-#[derive(BinRead, Debug)]
-#[brw(magic = b"7777")]
+#[derive(Debug)]
 pub struct EndSection {}
 
 /// Check if the end section appears in the stream

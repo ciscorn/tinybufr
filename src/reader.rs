@@ -2,8 +2,8 @@
 
 use std::io::Read;
 
-use binrw::{BinRead, BinReaderExt};
 use bitstream_io::{BigEndian, BitRead, BitReader};
+use byteorder::ReadBytesExt;
 
 use crate::sections::DataDescriptionSection;
 use crate::tables::{TableBEntry, TableDEntry, Tables};
@@ -38,13 +38,13 @@ impl<'a> DataSpec<'a> {
     }
 }
 
-impl<'a, R: BinReaderExt> DataReader<'a, R> {
+impl<'a, R: Read> DataReader<'a, R> {
     pub fn new(
         mut reader: R,
         spec: impl Into<&'a DataSpec<'a>>,
     ) -> Result<DataReader<'a, R>, Error> {
         let spec = spec.into();
-        let _data_section_header: DataSectionHeader = reader.read_be()?;
+        let _data_section_header = DataSectionHeader::read(&mut reader)?;
         Ok(DataReader {
             data_spec: spec,
             current_subset_idx: 0,
@@ -88,15 +88,27 @@ impl<'a> StackEntry<'a> {
     }
 }
 
-fn three_bytes_to_u32(bytes: (u8, u8, u8)) -> u32 {
-    (bytes.0 as u32) << 16 | (bytes.1 as u32) << 8 | (bytes.2 as u32)
+fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
+    (bytes[0] as u32) << 16 | (bytes[1] as u32) << 8 | (bytes[2] as u32)
 }
 
 /// The header of the data section (Section 4)
-#[derive(BinRead, Debug)]
+#[derive(Debug)]
 pub struct DataSectionHeader {
-    #[br(map = three_bytes_to_u32, pad_after = 1)]
     pub section_length: u32,
+}
+
+impl DataSectionHeader {
+    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        // Skip reserved byte
+        reader.read_u8()?;
+
+        Ok(Self { section_length })
+    }
 }
 
 #[derive(Debug)]
@@ -241,8 +253,8 @@ impl<'a, R: Read> DataReader<'a, R> {
         match bit_width {
             0..=32 => {
                 if self.data_spec.is_compressed {
-                    let local_ref_value: u32 = self.reader.read(bit_width)?;
-                    let nbinc: u8 = self.reader.read(6)?;
+                    let local_ref_value: u32 = self.reader.read_var(bit_width)?;
+                    let nbinc = self.reader.read::<6, u8>()?;
 
                     Ok(DataEvent::CompressedData {
                         idx,
@@ -263,7 +275,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                         } else {
                             (0..self.data_spec.number_of_subsets)
                                 .map(|_| {
-                                    let inc: u32 = self.reader.read(nbinc as u32)?;
+                                    let inc: u32 = self.reader.read_var(nbinc as u32)?;
                                     let v_raw = local_ref_value + inc;
                                     Ok(if v_raw == ((1u64 << bit_width) - 1) as u32 {
                                         Value::Missing
@@ -280,7 +292,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                         },
                     })
                 } else {
-                    let v_raw: u32 = self.reader.read(bit_width)?;
+                    let v_raw: u32 = self.reader.read_var(bit_width)?;
                     let value = if v_raw == ((1u64 << bit_width) - 1) as u32 {
                         Value::Missing
                     } else if scale == 0 {
@@ -328,7 +340,7 @@ impl<'a, R: Read> DataReader<'a, R> {
         delayed_bits: u8,
     ) -> Result<DataEvent, Error> {
         let count = match y {
-            0 => self.reader.read::<u16>(delayed_bits as u32)?,
+            0 => self.reader.read_var::<u16>(delayed_bits as u32)?,
             _ => y as u16,
         };
         self.stack
