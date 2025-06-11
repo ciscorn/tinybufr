@@ -4,7 +4,7 @@ use byteorder::{BigEndian, ReadBytesExt};
 use serde::Serialize;
 use std::io::Read;
 
-use crate::{Descriptor, Error};
+use crate::{Descriptor, Error, three_bytes_to_u32};
 
 /// The header sections of a BUFR file
 #[derive(Debug)]
@@ -49,10 +49,6 @@ impl HeaderSections {
             data_description_section,
         })
     }
-}
-
-fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
-    (bytes[0] as u32) << 16 | (bytes[1] as u32) << 8 | (bytes[2] as u32)
 }
 
 /// Indicator section (Section 0)

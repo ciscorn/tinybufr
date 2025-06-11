@@ -88,7 +88,7 @@ impl<'a> StackEntry<'a> {
     }
 }
 
-fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
+pub(crate) fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
     (bytes[0] as u32) << 16 | (bytes[1] as u32) << 8 | (bytes[2] as u32)
 }
 
