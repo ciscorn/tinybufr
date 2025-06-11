@@ -2,7 +2,7 @@
 
 use super::{Descriptor, TableDEntry, XY};
 
-pub static TABLE_D: [TableDEntry; 641] = [
+pub static TABLE_D: [TableDEntry; 642] = [
     TableDEntry {
         xy: XY { x: 0, y: 2 },
         category: "BUFR table entries sequences",
@@ -16,7 +16,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 0, y: 3 },
         category: "BUFR table entries sequences",
-        title: "(F, X, Y of descriptor to be added or defined)",
+        title: "F, X, Y of descriptor to be added or defined",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 0, y: 10 },
@@ -56,7 +56,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 0, y: 15 },
         category: "BUFR table entries sequences",
-        title: "(Code table definition)",
+        title: "Code table definition",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 0, y: 30 },
@@ -69,7 +69,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 0, y: 16 },
         category: "BUFR table entries sequences",
-        title: "(Flag table definition)",
+        title: "Flag table definition",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 0, y: 30 },
@@ -82,7 +82,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 1 },
         category: "Location and identification sequences",
-        title: "(WMO block and station numbers)",
+        title: "WMO block and station numbers",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 1 },
@@ -103,7 +103,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 3 },
         category: "Location and identification sequences",
-        title: "(Ship's call sign and motion)",
+        title: "Ship's call sign and motion",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -114,7 +114,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 4 },
         category: "Location and identification sequences",
-        title: "(Surface station identification)",
+        title: "Surface station identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 1 },
@@ -126,7 +126,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 5 },
         category: "Location and identification sequences",
-        title: "(Originating centre/sub-centre)",
+        title: "Originating centre/sub-centre",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 35 },
@@ -136,7 +136,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 11 },
         category: "Location and identification sequences",
-        title: "(Year, month, day)",
+        title: "Year, month, day",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 1 },
@@ -147,7 +147,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 12 },
         category: "Location and identification sequences",
-        title: "(Hour, minute)",
+        title: "Hour, minute",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 4 },
@@ -157,7 +157,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 13 },
         category: "Location and identification sequences",
-        title: "(Hour, minute, second)",
+        title: "Hour, minute, second",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 4 },
@@ -168,7 +168,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 14 },
         category: "Location and identification sequences",
-        title: "(Time period)",
+        title: "Time period",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 2, y: 2 },
@@ -179,7 +179,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 18 },
         category: "Location and identification sequences",
-        title: "(Encrypted ship's call sign and encryption method)",
+        title: "Encrypted ship's call sign and encryption method",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 114 },
@@ -198,7 +198,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 21 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (high accuracy))",
+        title: "Latitude/longitude (high accuracy)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 1 },
@@ -208,7 +208,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 22 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (high accuracy), height of station)",
+        title: "Latitude/longitude (high accuracy), height of station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 1 },
@@ -219,7 +219,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 23 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (coarse accuracy))",
+        title: "Latitude/longitude (coarse accuracy)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 2 },
@@ -229,7 +229,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 24 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (coarse accuracy), height of station)",
+        title: "Latitude/longitude (coarse accuracy), height of station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 2 },
@@ -240,7 +240,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 25 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (coarse accuracy), day/time)",
+        title: "Latitude/longitude (coarse accuracy), day/time",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 23 },
@@ -251,7 +251,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 26 },
         category: "Location and identification sequences",
-        title: "(Latitude/longitude (high accuracy), time period (day, hour, minute))",
+        title: "Latitude/longitude (high accuracy), time period (day, hour, minute)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 21 },
@@ -266,7 +266,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 27 },
         category: "Location and identification sequences",
-        title: "(Description of a feature in 3-D or 2-D)",
+        title: "Description of a feature in 3-D or 2-D",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 7 },
@@ -279,7 +279,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 28 },
         category: "Location and identification sequences",
-        title: "(Horizontal section of a feature described as a polygon, circle, line or point)",
+        title: "Horizontal section of a feature described as a polygon, circle, line or point",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 40 },
@@ -295,7 +295,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 29 },
         category: "Location and identification sequences",
-        title: "(Identification)",
+        title: "Identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 18 },
@@ -306,7 +306,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 30 },
         category: "Location and identification sequences",
-        title: "(Identification - with physical location)",
+        title: "Identification - with physical location",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 18 },
@@ -318,7 +318,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 31 },
         category: "Location and identification sequences",
-        title: "(Identification and type of station, date/time, location (high accuracy), height of station)",
+        title: "Identification and type of station, date/time, location (high accuracy), height of station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -331,7 +331,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 32 },
         category: "Location and identification sequences",
-        title: "(Identification and type of station, date/time, location (coarse accuracy), height of station)",
+        title: "Identification and type of station, date/time, location (coarse accuracy), height of station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -344,7 +344,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 33 },
         category: "Location and identification sequences",
-        title: "(Buoy/platform - fixed)",
+        title: "Buoy/platform - fixed",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 5 },
@@ -357,7 +357,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 34 },
         category: "Location and identification sequences",
-        title: "(Buoy/platform - fixed)",
+        title: "Buoy/platform - fixed",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 5 },
@@ -370,7 +370,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 35 },
         category: "Location and identification sequences",
-        title: "(Buoy/platform - moving)",
+        title: "Buoy/platform - moving",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 5 },
@@ -385,7 +385,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 36 },
         category: "Location and identification sequences",
-        title: "(Ship)",
+        title: "Ship",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 3 },
@@ -398,7 +398,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 37 },
         category: "Location and identification sequences",
-        title: "(Land station for vertical soundings)",
+        title: "Land station for vertical soundings",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -412,7 +412,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 38 },
         category: "Location and identification sequences",
-        title: "(Land station for vertical soundings)",
+        title: "Land station for vertical soundings",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -426,7 +426,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 39 },
         category: "Location and identification sequences",
-        title: "(Ship for vertical soundings)",
+        title: "Ship for vertical soundings",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 3 },
@@ -440,7 +440,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 40 },
         category: "Location and identification sequences",
-        title: "(Ship for vertical soundings)",
+        title: "Ship for vertical soundings",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 3 },
@@ -454,7 +454,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 41 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier, instrument, data-processing technique, date/time)",
+        title: "Satellite identifier, instrument, data-processing technique, date/time",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -467,7 +467,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 42 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier, instrument, data-processing technique, date/time, location)",
+        title: "Satellite identifier, instrument, data-processing technique, date/time, location",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 41 },
@@ -477,7 +477,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 43 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier, wind computation method, date/time, location)",
+        title: "Satellite identifier, wind computation method, date/time, location",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -490,7 +490,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 44 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier, humidity computation method, date/time, location)",
+        title: "Satellite identifier, humidity computation method, date/time, location",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -503,7 +503,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 45 },
         category: "Location and identification sequences",
-        title: "(Satellite location and velocity)",
+        title: "Satellite location and velocity",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -520,7 +520,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 46 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier, direction of motion, sensor, model function, software, resolution)",
+        title: "Satellite identifier, direction of motion, sensor, model function, software, resolution",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -542,7 +542,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 47 },
         category: "Location and identification sequences",
-        title: "(ERS product header)",
+        title: "ERS product header",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -565,7 +565,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 48 },
         category: "Location and identification sequences",
-        title: "(Radar parameters)",
+        title: "Radar parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 104 },
@@ -587,7 +587,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 49 },
         category: "Location and identification sequences",
-        title: "(Radar beam data)",
+        title: "Radar beam data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 111 },
@@ -600,7 +600,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 51 },
         category: "Location and identification sequences",
-        title: "(Flight number, navigational system, date/time, location, phase of flight)",
+        title: "Flight number, navigational system, date/time, location, phase of flight",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 6 },
@@ -614,7 +614,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 55 },
         category: "Location and identification sequences",
-        title: "(Identification and type of station, date/time, location (high accuracy), movement)",
+        title: "Identification and type of station, date/time, location (high accuracy), movement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 5 },
@@ -629,7 +629,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 56 },
         category: "Location and identification sequences",
-        title: "(Sequence for platform identification, type, time and location of the observation report)",
+        title: "Sequence for platform identification, type, time and location of the observation report",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 87 },
@@ -647,7 +647,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 58 },
         category: "Location and identification sequences",
-        title: "(Universal lightning event)",
+        title: "Universal lightning event",
         sub_title: "Date/time of lightning event",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -748,7 +748,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 59 },
         category: "Location and identification sequences",
-        title: "(Identification of sensor site and instrumentation)",
+        title: "Identification of sensor site and instrumentation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 21 },
@@ -759,7 +759,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 62 },
         category: "Location and identification sequences",
-        title: "(Radar location(s))",
+        title: "Radar location(s)",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -770,7 +770,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 65 },
         category: "Location and identification sequences",
-        title: "(ACARS identification)",
+        title: "ACARS identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 6 },
@@ -786,7 +786,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 66 },
         category: "Location and identification sequences",
-        title: "(ACARS location)",
+        title: "ACARS location",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -800,7 +800,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 70 },
         category: "Location and identification sequences",
-        title: "(Ozone instrumentation - Brewer spectrophotometer)",
+        title: "Ozone instrumentation - Brewer spectrophotometer",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 143 },
@@ -811,7 +811,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 71 },
         category: "Location and identification sequences",
-        title: "(Satellite identifier/Generating resolution)",
+        title: "Satellite identifier/Generating resolution",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -824,7 +824,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 72 },
         category: "Location and identification sequences",
-        title: "(Satellite identification)",
+        title: "Satellite identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 71 },
@@ -836,7 +836,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 74 },
         category: "Location and identification sequences",
-        title: "(Ozone instrumentation - Dobson spectrophotometer)",
+        title: "Ozone instrumentation - Dobson spectrophotometer",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 143 },
@@ -848,7 +848,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 75 },
         category: "Location and identification sequences",
-        title: "(Sounding identification)",
+        title: "Sounding identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -862,7 +862,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 76 },
         category: "Location and identification sequences",
-        title: "(Ozone sounding instrumentation)",
+        title: "Ozone sounding instrumentation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 11 },
@@ -873,7 +873,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 89 },
         category: "Location and identification sequences",
-        title: "(National station identification)",
+        title: "National station identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 101 },
@@ -883,7 +883,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 90 },
         category: "Location and identification sequences",
-        title: "(Surface station identification; time, horizontal and vertical coordinates)",
+        title: "Surface station identification; time, horizontal and vertical coordinates",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 4 },
@@ -897,7 +897,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 91 },
         category: "Location and identification sequences",
-        title: "(Surface station instrumentation)",
+        title: "Surface station instrumentation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 180 },
@@ -915,7 +915,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 92 },
         category: "Location and identification sequences",
-        title: "(Mobile surface station identification, date/time, horizontal and vertical coordinates)",
+        title: "Mobile surface station identification, date/time, horizontal and vertical coordinates",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -932,7 +932,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 93 },
         category: "Location and identification sequences",
-        title: "(Ship identification, movement, date/time, horizontal and vertical coordinates)",
+        title: "Ship identification, movement, date/time, horizontal and vertical coordinates",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 36 },
@@ -943,7 +943,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 110 },
         category: "Location and identification sequences",
-        title: "(Identification of launch site and instrumentation for wind measurements)",
+        title: "Identification of launch site and instrumentation for wind measurements",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -956,7 +956,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 111 },
         category: "Location and identification sequences",
-        title: "(Identification of launch site and instrumentation for P, T, U and wind measurements)",
+        title: "Identification of launch site and instrumentation for P, T, U and wind measurements",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -970,7 +970,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 112 },
         category: "Location and identification sequences",
-        title: "(Identification of launch point and instrumentation of dropsonde)",
+        title: "Identification of launch point and instrumentation of dropsonde",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 6 },
@@ -983,7 +983,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 113 },
         category: "Location and identification sequences",
-        title: "(Date/time of launch)",
+        title: "Date/time of launch",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -994,7 +994,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 114 },
         category: "Location and identification sequences",
-        title: "(Horizontal and vertical coordinates of launch site)",
+        title: "Horizontal and vertical coordinates of launch site",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 21 },
@@ -1007,7 +1007,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 120 },
         category: "Location and identification sequences",
-        title: "(Radiosonde abbreviated header and launch information)",
+        title: "Radiosonde abbreviated header and launch information",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -1019,7 +1019,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 121 },
         category: "Location and identification sequences",
-        title: "(Radiosonde launch point location)",
+        title: "Radiosonde launch point location",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 41 },
@@ -1032,7 +1032,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 122 },
         category: "Location and identification sequences",
-        title: "(Date/time (to hundredths of second))",
+        title: "Date/time (to hundredths of second)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -1047,7 +1047,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 123 },
         category: "Location and identification sequences",
-        title: "(Radiosonde full header information)",
+        title: "Radiosonde full header information",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 2, y: 2 },
@@ -1088,7 +1088,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 125 },
         category: "Location and identification sequences",
-        title: "(ASCAT header information)",
+        title: "ASCAT header information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -1102,7 +1102,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 126 },
         category: "Location and identification sequences",
-        title: "(Sequence for representation of moored buoy identification)",
+        title: "Sequence for representation of moored buoy identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 87 },
@@ -1116,7 +1116,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 128 },
         category: "Location and identification sequences",
-        title: "(Additional information on radiosonde ascent)",
+        title: "Additional information on radiosonde ascent",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 81 },
@@ -1147,7 +1147,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 129 },
         category: "Location and identification sequences",
-        title: "(Observing satellite and instruments)",
+        title: "Observing satellite and instruments",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -1159,7 +1159,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 130 },
         category: "Location and identification sequences",
-        title: "(High precision timestamp)",
+        title: "High precision timestamp",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -1174,7 +1174,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 131 },
         category: "Location and identification sequences",
-        title: "(Pixel geolocation)",
+        title: "Pixel geolocation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 21 },
@@ -1187,7 +1187,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 132 },
         category: "Location and identification sequences",
-        title: "(Common header sequence)",
+        title: "Common header sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -1205,7 +1205,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 1, y: 150 },
         category: "Location and identification sequences",
-        title: "(WIGOS identifier)",
+        title: "WIGOS identifier",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 125 },
@@ -1217,7 +1217,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 1 },
         category: "Meteorological sequences common to surface data",
-        title: "(Pressure and 3-hour pressure change)",
+        title: "Pressure and 3-hour pressure change",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 4 },
@@ -1229,7 +1229,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 2 },
         category: "Meteorological sequences common to surface data",
-        title: "(High altitude station)",
+        title: "High altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 4 },
@@ -1242,7 +1242,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 3 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind, temperature, humidity, visibility, weather)",
+        title: "Wind, temperature, humidity, visibility, weather",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 11, y: 11 },
@@ -1259,7 +1259,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 4 },
         category: "Meteorological sequences common to surface data",
-        title: "(General cloud information)",
+        title: "General cloud information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 10 },
@@ -1274,7 +1274,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 5 },
         category: "Meteorological sequences common to surface data",
-        title: "(Cloud layer)",
+        title: "Cloud layer",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 2 },
@@ -1286,7 +1286,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 6 },
         category: "Meteorological sequences common to surface data",
-        title: "(Pressure and 24-hour pressure change)",
+        title: "Pressure and 24-hour pressure change",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 4 },
@@ -1298,7 +1298,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 11 },
         category: "Meteorological sequences common to surface data",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 1 },
@@ -1309,7 +1309,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 12 },
         category: "Meteorological sequences common to surface data",
-        title: "(High altitude station)",
+        title: "High altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 2 },
@@ -1320,7 +1320,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 13 },
         category: "Meteorological sequences common to surface data",
-        title: "(Basic surface report)",
+        title: "Basic surface report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 6 },
@@ -1333,7 +1333,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 21 },
         category: "Meteorological sequences common to surface data",
-        title: "(Waves)",
+        title: "Waves",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 1 },
@@ -1344,7 +1344,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 22 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind waves)",
+        title: "Wind waves",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 2 },
@@ -1355,7 +1355,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 23 },
         category: "Meteorological sequences common to surface data",
-        title: "(Swell waves)",
+        title: "Swell waves",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 3 },
@@ -1366,7 +1366,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 24 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind and swell waves)",
+        title: "Wind and swell waves",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 22 },
@@ -1377,7 +1377,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 31 },
         category: "Meteorological sequences common to surface data",
-        title: "(Pressure information)",
+        title: "Pressure information",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 1 },
@@ -1389,7 +1389,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 32 },
         category: "Meteorological sequences common to surface data",
-        title: "(Temperature and humidity data)",
+        title: "Temperature and humidity data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1409,7 +1409,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 33 },
         category: "Meteorological sequences common to surface data",
-        title: "(Visibility data)",
+        title: "Visibility data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1419,7 +1419,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 34 },
         category: "Meteorological sequences common to surface data",
-        title: "(Precipitation past 24 hours)",
+        title: "Precipitation past 24 hours",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1429,7 +1429,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 35 },
         category: "Meteorological sequences common to surface data",
-        title: "(Basic synoptic \"instantaneous\" data)",
+        title: "Basic synoptic \"instantaneous\" data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 32 },
@@ -1445,7 +1445,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 36 },
         category: "Meteorological sequences common to surface data",
-        title: "(Clouds with bases below station level)",
+        title: "Clouds with bases below station level",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 5, y: 0 },
@@ -1460,7 +1460,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 37 },
         category: "Meteorological sequences common to surface data",
-        title: "(State of ground, snow depth, ground minimum temperature)",
+        title: "State of ground, snow depth, ground minimum temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 62 },
@@ -1475,7 +1475,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 38 },
         category: "Meteorological sequences common to surface data",
-        title: "(Present and past weather)",
+        title: "Present and past weather",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 3 },
@@ -1487,7 +1487,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 39 },
         category: "Meteorological sequences common to surface data",
-        title: "(Sunshine data (from 1 hour and 24 hour period))",
+        title: "Sunshine data (from 1 hour and 24 hour period)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 24 },
@@ -1497,7 +1497,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 40 },
         category: "Meteorological sequences common to surface data",
-        title: "(Precipitation measurement)",
+        title: "Precipitation measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1509,7 +1509,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 41 },
         category: "Meteorological sequences common to surface data",
-        title: "(Extreme temperature data)",
+        title: "Extreme temperature data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1532,7 +1532,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 42 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind data)",
+        title: "Wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1551,7 +1551,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 43 },
         category: "Meteorological sequences common to surface data",
-        title: "(Basic synoptic \"period\" data)",
+        title: "Basic synoptic \"period\" data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 38 },
@@ -1566,7 +1566,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 44 },
         category: "Meteorological sequences common to surface data",
-        title: "(Evaporation data)",
+        title: "Evaporation data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 24 },
@@ -1577,7 +1577,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 45 },
         category: "Meteorological sequences common to surface data",
-        title: "(Radiation data (from 1 hour and 24 hour period))",
+        title: "Radiation data (from 1 hour and 24 hour period)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 24 },
@@ -1592,7 +1592,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 46 },
         category: "Meteorological sequences common to surface data",
-        title: "(Temperature change)",
+        title: "Temperature change",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 24 },
@@ -1603,7 +1603,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 47 },
         category: "Meteorological sequences common to surface data",
-        title: "(Direction of cloud drift)",
+        title: "Direction of cloud drift",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 2, y: 3 },
@@ -1614,7 +1614,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 48 },
         category: "Meteorological sequences common to surface data",
-        title: "(Direction and elevation of cloud)",
+        title: "Direction and elevation of cloud",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 21 },
@@ -1627,7 +1627,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 49 },
         category: "Meteorological sequences common to surface data",
-        title: "(Cloud information reported with vertical soundings)",
+        title: "Cloud information reported with vertical soundings",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 2 },
@@ -1642,7 +1642,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 50 },
         category: "Meteorological sequences common to surface data",
-        title: "(Radiosonde surface observation)",
+        title: "Radiosonde surface observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 41 },
@@ -1713,7 +1713,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 52 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship temperature and humidity data)",
+        title: "Ship temperature and humidity data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1740,7 +1740,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 53 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship visibility data)",
+        title: "Ship visibility data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1751,7 +1751,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 54 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship \"instantaneous\" data)",
+        title: "Ship \"instantaneous\" data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 52 },
@@ -1768,7 +1768,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 55 },
         category: "Meteorological sequences common to surface data",
-        title: "(Icing and ice)",
+        title: "Icing and ice",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 31 },
@@ -1784,7 +1784,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 56 },
         category: "Meteorological sequences common to surface data",
-        title: "(Sea/water temperature)",
+        title: "Sea/water temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 38 },
@@ -1796,7 +1796,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 57 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship marine data)",
+        title: "Ship marine data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 56 },
@@ -1807,7 +1807,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 58 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship extreme temperature data)",
+        title: "Ship extreme temperature data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1831,7 +1831,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 59 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship wind data)",
+        title: "Ship wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1851,7 +1851,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 60 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship \"period\" data)",
+        title: "Ship \"period\" data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 38 },
@@ -1863,7 +1863,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 62 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship \"instantaneous\" data)",
+        title: "Ship \"instantaneous\" data",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -1902,7 +1902,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 63 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship \"period\" data)",
+        title: "Ship \"period\" data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 38 },
@@ -1924,7 +1924,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 64 },
         category: "Meteorological sequences common to surface data",
-        title: "(Ship or other marine platform wind data)",
+        title: "Ship or other marine platform wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -1945,7 +1945,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 66 },
         category: "Meteorological sequences common to surface data",
-        title: "(Dangerous weather phenomena)",
+        title: "Dangerous weather phenomena",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 23 },
@@ -1969,7 +1969,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 67 },
         category: "Meteorological sequences common to surface data",
-        title: "(Additional synoptical parameters)",
+        title: "Additional synoptical parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 23 },
@@ -2069,7 +2069,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 69 },
         category: "Meteorological sequences common to surface data",
-        title: "(Visibility data)",
+        title: "Visibility data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2081,7 +2081,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 70 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind data)",
+        title: "Wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2097,7 +2097,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 71 },
         category: "Meteorological sequences common to surface data",
-        title: "(Wind data from one-hour period)",
+        title: "Wind data from one-hour period",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2119,7 +2119,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 72 },
         category: "Meteorological sequences common to surface data",
-        title: "(Temperature and humidity data)",
+        title: "Temperature and humidity data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2140,7 +2140,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 73 },
         category: "Meteorological sequences common to surface data",
-        title: "(Cloud data)",
+        title: "Cloud data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 10 },
@@ -2155,7 +2155,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 74 },
         category: "Meteorological sequences common to surface data",
-        title: "(Present and past weather)",
+        title: "Present and past weather",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 3 },
@@ -2167,7 +2167,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 75 },
         category: "Meteorological sequences common to surface data",
-        title: "(Intensity of precipitation, size of precipitation element)",
+        title: "Intensity of precipitation, size of precipitation element",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -2180,7 +2180,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 76 },
         category: "Meteorological sequences common to surface data",
-        title: "(Precipitation, obscuration and other phenomena)",
+        title: "Precipitation, obscuration and other phenomena",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 21 },
@@ -2195,7 +2195,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 77 },
         category: "Meteorological sequences common to surface data",
-        title: "(Extreme temperature data)",
+        title: "Extreme temperature data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2223,7 +2223,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 78 },
         category: "Meteorological sequences common to surface data",
-        title: "(State of ground and snow depth measurement)",
+        title: "State of ground and snow depth measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 176 },
@@ -2235,7 +2235,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 79 },
         category: "Meteorological sequences common to surface data",
-        title: "(Precipitation measurement)",
+        title: "Precipitation measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2248,7 +2248,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 80 },
         category: "Meteorological sequences common to surface data",
-        title: "(Evaporation measurement)",
+        title: "Evaporation measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 185 },
@@ -2259,7 +2259,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 81 },
         category: "Meteorological sequences common to surface data",
-        title: "(Total sunshine data)",
+        title: "Total sunshine data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 25 },
@@ -2269,7 +2269,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 82 },
         category: "Meteorological sequences common to surface data",
-        title: "(Radiation data)",
+        title: "Radiation data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 25 },
@@ -2284,7 +2284,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 83 },
         category: "Meteorological sequences common to surface data",
-        title: "(First-order statistics of P, W, T, U data)",
+        title: "First-order statistics of P, W, T, U data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 25 },
@@ -2304,7 +2304,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 84 },
         category: "Meteorological sequences common to surface data",
-        title: "(\"Instantaneous\" data of sequence 3 07 096)",
+        title: "\"Instantaneous\" data of sequence 3 07 096",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 31 },
@@ -2357,7 +2357,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 85 },
         category: "Meteorological sequences common to surface data",
-        title: "(\"Period\" data of sequence 3 07 096)",
+        title: "\"Period\" data of sequence 3 07 096",
         sub_title: "Present and past weather data",
         elements: &[
             Descriptor { f: 1, x: 5, y: 0 },
@@ -2428,7 +2428,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 89 },
         category: "Meteorological sequences common to surface data",
-        title: "(Locust information)",
+        title: "Locust information",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -2476,7 +2476,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 90 },
         category: "Meteorological sequences common to surface data",
-        title: "(Sea/water temperature high precision)",
+        title: "Sea/water temperature high precision",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 38 },
@@ -2487,7 +2487,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 91 },
         category: "Meteorological sequences common to surface data",
-        title: "(Sequence for representation of ancillary meteorological observations)",
+        title: "Sequence for representation of ancillary meteorological observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 1 },
@@ -2498,7 +2498,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 92 },
         category: "Meteorological sequences common to surface data",
-        title: "(VOSClim data elements)",
+        title: "VOSClim data elements",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -2517,7 +2517,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 93 },
         category: "Meteorological sequences common to surface data",
-        title: "(Extended ship temperature and humidity data)",
+        title: "Extended ship temperature and humidity data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -2560,7 +2560,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 2, y: 175 },
         category: "Meteorological sequences common to surface data",
-        title: "(Intensity of precipitation, size of precipitation element)",
+        title: "Intensity of precipitation, size of precipitation element",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -2588,7 +2588,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 2 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind at pressure level)",
+        title: "Wind at pressure level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2625,7 +2625,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 11 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind at height)",
+        title: "Wind at height",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 3 },
@@ -2637,7 +2637,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 12 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind at pressure level)",
+        title: "Wind at pressure level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2649,7 +2649,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 13 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Geopotential, temperature, humidity, wind at pressure level)",
+        title: "Geopotential, temperature, humidity, wind at pressure level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2664,7 +2664,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 14 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Geopotential, temperature, dewpoint temperature, wind at pressure level)",
+        title: "Geopotential, temperature, dewpoint temperature, wind at pressure level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2679,7 +2679,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 21 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Layer, quality)",
+        title: "Layer, quality",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2702,7 +2702,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 23 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Layer mean temperature)",
+        title: "Layer mean temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 3, y: 21 },
@@ -2713,7 +2713,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 24 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Precipitable water)",
+        title: "Precipitable water",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 3, y: 21 },
@@ -2724,7 +2724,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 25 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Satellite channel and brightness temperature)",
+        title: "Satellite channel and brightness temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 25 },
@@ -2764,7 +2764,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 31 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Significance data, land/sea, skin temperature)",
+        title: "Significance data, land/sea, skin temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 4 },
@@ -2778,7 +2778,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 32 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Cloud)",
+        title: "Cloud",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 11 },
@@ -2788,7 +2788,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 33 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Cloud)",
+        title: "Cloud",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 10 },
@@ -2798,7 +2798,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 40 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Radiosonde duration of flight and termination information)",
+        title: "Radiosonde duration of flight and termination information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 41 },
@@ -2828,7 +2828,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 41 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind sequence)",
+        title: "Wind sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 152 },
@@ -2844,7 +2844,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 50 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind data at a pressure level with radiosonde position)",
+        title: "Wind data at a pressure level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2859,7 +2859,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 51 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind shear data at a pressure level with radiosonde position)",
+        title: "Wind shear data at a pressure level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2874,7 +2874,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 52 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind data at a height level with radiosonde position)",
+        title: "Wind data at a height level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2889,7 +2889,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 53 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Wind shear data at a height level with radiosonde position)",
+        title: "Wind shear data at a height level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2904,7 +2904,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 54 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Temperature, dewpoint and wind data at a pressure level with radiosonde position)",
+        title: "Temperature, dewpoint and wind data at a pressure level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2930,7 +2930,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 55 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Temperature, dewpoint, relative humidity and wind data at a height level with radiosonde position)",
+        title: "Temperature, dewpoint, relative humidity and wind data at a height level with radiosonde position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2956,7 +2956,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 56 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Temperature, dewpoint and wind data at a pressure level with radiosonde position and higher precision of pressure and geopotential height)",
+        title: "Temperature, dewpoint and wind data at a pressure level with radiosonde position and higher precision of pressure and geopotential height",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 86 },
@@ -2984,7 +2984,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 99 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Metadata common to temperature/humidity sensors)",
+        title: "Metadata common to temperature/humidity sensors",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 3, y: 5 },
@@ -3003,7 +3003,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 3, y: 100 },
         category: "Meteorological sequences common to vertical soundings data",
-        title: "(Forecast indices)",
+        title: "Forecast indices",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -3049,7 +3049,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 1 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Cloud top pressure, temperature, wind)",
+        title: "Cloud top pressure, temperature, wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 3 },
@@ -3062,7 +3062,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 2 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Cloud top pressure, wind)",
+        title: "Cloud top pressure, wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 3 },
@@ -3074,7 +3074,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 3 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Surface temperature)",
+        title: "Surface temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 3 },
@@ -3084,7 +3084,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 4 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Cloud top pressure, cloud cover, temperature)",
+        title: "Cloud top pressure, cloud cover, temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 3 },
@@ -3096,7 +3096,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 5 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Layer mean relative humidity)",
+        title: "Layer mean relative humidity",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 24 },
@@ -3108,7 +3108,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 6 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Radiation)",
+        title: "Radiation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 14, y: 1 },
@@ -3119,7 +3119,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 11 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(GOES-I/M info)",
+        title: "GOES-I/M info",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 163 },
@@ -3154,7 +3154,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 30 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Location of platform)",
+        title: "Location of platform",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 27, y: 31 },
@@ -3165,7 +3165,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 31 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Speed of platform)",
+        title: "Speed of platform",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 41 },
@@ -3176,7 +3176,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 32 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Cloud fraction)",
+        title: "Cloud fraction",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 153 },
@@ -3189,7 +3189,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 33 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Clear sky radiance)",
+        title: "Clear sky radiance",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 152 },
@@ -3205,7 +3205,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 34 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Latitude/longitude, solar elevation, number of layers)",
+        title: "Latitude/longitude, solar elevation, number of layers",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 2, y: 4 },
@@ -3222,7 +3222,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 36 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Cloud coverage)",
+        title: "Cloud coverage",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 82 },
@@ -3242,7 +3242,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 37 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(All sky radiance data)",
+        title: "All sky radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 153 },
@@ -3264,7 +3264,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 39 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Radiance in channel)",
+        title: "Radiance in channel",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 136 },
@@ -3276,7 +3276,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 4, y: 40 },
         category: "Meteorological sequences common to satellite observations",
-        title: "(Principal component score in band)",
+        title: "Principal component score in band",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -3300,7 +3300,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 1 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(SADC-HYCOS single measurement)",
+        title: "SADC-HYCOS single measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 11, y: 1 },
@@ -3312,7 +3312,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 2 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(SADC-HYCOS environmental measurement)",
+        title: "SADC-HYCOS environmental measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 12 },
@@ -3331,7 +3331,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 3 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(SADC-HYCOS measurement array definition)",
+        title: "SADC-HYCOS measurement array definition",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 12 },
@@ -3344,7 +3344,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 4 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(SADC-HYCOS report)",
+        title: "SADC-HYCOS report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 30 },
@@ -3355,7 +3355,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 6 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(MEDHYCOS measurement)",
+        title: "MEDHYCOS measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 13, y: 72 },
@@ -3369,7 +3369,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 7 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(MEDHYCOS report)",
+        title: "MEDHYCOS report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 29 },
@@ -3383,7 +3383,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 8 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(AOCHYCOS - Chad measurement)",
+        title: "AOCHYCOS - Chad measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 5, y: 6 },
@@ -3393,7 +3393,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 9 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(AOCHYCOS - Chad report)",
+        title: "AOCHYCOS - Chad report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 29 },
@@ -3407,7 +3407,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 10 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(MEDHYCOS-Measurement type 2)",
+        title: "MEDHYCOS-Measurement type 2",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 5, y: 8 },
@@ -3418,7 +3418,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 11 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(MEDHYCOS report type 2)",
+        title: "MEDHYCOS report type 2",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 29 },
@@ -3432,7 +3432,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 16 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(Meteorological parameters associated with hydrological data)",
+        title: "Meteorological parameters associated with hydrological data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 14, y: 21 },
@@ -3447,7 +3447,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 17 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(Water quality measurement)",
+        title: "Water quality measurement",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 13, y: 80 },
@@ -3460,7 +3460,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 5, y: 18 },
         category: "Meteorological or hydrological sequences common to hydrological observations",
-        title: "(MEDHYCOS report with meteorology and water quality data)",
+        title: "MEDHYCOS report with meteorology and water quality data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 29 },
@@ -3476,7 +3476,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 1 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Depth, temperature)",
+        title: "Depth, temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 32 },
@@ -3489,7 +3489,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 2 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Current)",
+        title: "Current",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 31 },
@@ -3500,7 +3500,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 3 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Surface wind and temperature)",
+        title: "Surface wind and temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 2 },
@@ -3512,7 +3512,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 4 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Depth, temperature, salinity)",
+        title: "Depth, temperature, salinity",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 32 },
@@ -3541,7 +3541,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 6 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Under water sounding (optional) parameters)",
+        title: "Under water sounding (optional) parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 3 },
@@ -3552,7 +3552,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 7 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Buoy spare block parameters)",
+        title: "Buoy spare block parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 12 },
@@ -3566,7 +3566,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 8 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Buoy instrumentation parameters)",
+        title: "Buoy instrumentation parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 34 },
@@ -3577,7 +3577,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 11 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of tide station identification, method of transmission, time the message is transmitted and reference time for reports in a time series)",
+        title: "Sequence for representation of tide station identification, method of transmission, time the message is transmitted and reference time for reports in a time series",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 21 },
@@ -3590,7 +3590,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 12 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of sensor type, significant qualifier for sensor and status of operation)",
+        title: "Sequence for representation of sensor type, significant qualifier for sensor and status of operation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 7 },
@@ -3602,7 +3602,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 13 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of water level and residual in the time series)",
+        title: "Sequence for representation of water level and residual in the time series",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 12 },
@@ -3629,7 +3629,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 14 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of water level in the time series, similar to 3 06 013 but with no residual)",
+        title: "Sequence for representation of water level in the time series, similar to 3 06 013 but with no residual",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 12 },
@@ -3655,7 +3655,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 16 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of ancillary meteorological data associated with water level data)",
+        title: "Sequence for representation of ancillary meteorological data associated with water level data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -3679,7 +3679,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 17 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Subsurface temperature profile (high accuracy/precision) with quality flags)",
+        title: "Subsurface temperature profile (high accuracy/precision) with quality flags",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 32 },
@@ -3698,7 +3698,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 18 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Subsurface temperature profile (high accuracy/precision) with quality flags)",
+        title: "Subsurface temperature profile (high accuracy/precision) with quality flags",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 32 },
@@ -3720,7 +3720,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 19 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Tide report identification, water level checks, time increments)",
+        title: "Tide report identification, water level checks, time increments",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 75 },
@@ -3744,7 +3744,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 21 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Meteorological parameters in tide station)",
+        title: "Meteorological parameters in tide station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 75 },
@@ -3767,7 +3767,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 22 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Tidal elevation)",
+        title: "Tidal elevation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 75 },
@@ -3804,7 +3804,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 25 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Tide elevation series)",
+        title: "Tide elevation series",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 19 },
@@ -3816,7 +3816,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 27 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of DART buoy identification, transmitter ID, type of tsunameter and the time the message is transmitted to the ground system)",
+        title: "Sequence for representation of DART buoy identification, transmitter ID, type of tsunameter and the time the message is transmitted to the ground system",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 5 },
@@ -3829,7 +3829,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 28 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of time of observation and DART buoy position daily report)",
+        title: "Sequence for representation of time of observation and DART buoy position daily report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 27 },
@@ -3841,7 +3841,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 29 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of tsunameter sampling information for water column heights in the time series report)",
+        title: "Sequence for representation of tsunameter sampling information for water column heights in the time series report",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -3864,7 +3864,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 30 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of DART buoy standard hourly report)",
+        title: "Sequence for representation of DART buoy standard hourly report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 27 },
@@ -3895,7 +3895,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 31 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of DART buoy tsunami event reports and extended tsunami event reports)",
+        title: "Sequence for representation of DART buoy tsunami event reports and extended tsunami event reports",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 6, y: 27 },
@@ -3930,7 +3930,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 33 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Surface salinity)",
+        title: "Surface salinity",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 33 },
@@ -3941,7 +3941,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 34 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Surface current)",
+        title: "Surface current",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 31 },
@@ -3954,7 +3954,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 35 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Temperature and salinity profile)",
+        title: "Temperature and salinity profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 12, y: 0 },
@@ -3976,7 +3976,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 36 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Current profile)",
+        title: "Current profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 12, y: 0 },
@@ -3998,7 +3998,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 37 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Dissolved oxygen profile data)",
+        title: "Dissolved oxygen profile data",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 9, y: 0 },
@@ -4021,7 +4021,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 38 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of standard surface marine meteorological observations from moored buoys)",
+        title: "Sequence for representation of standard surface marine meteorological observations from moored buoys",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 4 },
@@ -4056,7 +4056,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 39 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of basic wave measurements)",
+        title: "Sequence for representation of basic wave measurements",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 78 },
@@ -4071,7 +4071,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 40 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sequence for representation of detailed spectral wave measurements)",
+        title: "Sequence for representation of detailed spectral wave measurements",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 78 },
@@ -4089,7 +4089,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 41 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Depth and temperature profile (high accuracy/precision))",
+        title: "Depth and temperature profile (high accuracy/precision)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 32 },
@@ -4102,7 +4102,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 42 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Wind measurement from drifting buoy)",
+        title: "Wind measurement from drifting buoy",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 169 },
@@ -4116,7 +4116,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 43 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Marine biogeochemical and radiation observations)",
+        title: "Marine biogeochemical and radiation observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 41, y: 1 },
@@ -4145,7 +4145,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 44 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Dissolved oxygen profile from floats)",
+        title: "Dissolved oxygen profile from floats",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 3, y: 14 },
@@ -4175,7 +4175,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 45 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Chlorophyll-A profile from floats)",
+        title: "Chlorophyll-A profile from floats",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 3, y: 11 },
@@ -4195,7 +4195,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 46 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Dissolved nitrate profile data from floats)",
+        title: "Dissolved nitrate profile data from floats",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 3, y: 15 },
@@ -4215,7 +4215,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 47 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(Sea water pH profile data from floats)",
+        title: "Sea water pH profile data from floats",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 6, y: 0 },
@@ -4231,7 +4231,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 6, y: 48 },
         category: "Meteorological or oceanographic sequences common to oceanographic observations",
-        title: "(BBP700 profile data)",
+        title: "BBP700 profile data",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 3, y: 9 },
@@ -4251,7 +4251,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 1 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -4261,7 +4261,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 2 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 32 },
@@ -4271,7 +4271,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 3 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 1 },
@@ -4283,7 +4283,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 4 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 2 },
@@ -4295,7 +4295,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 5 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 1 },
@@ -4306,7 +4306,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 6 },
         category: "Surface report sequences (land)",
-        title: "(Low altitude station)",
+        title: "Low altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 2 },
@@ -4317,7 +4317,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 7 },
         category: "Surface report sequences (land)",
-        title: "(High altitude station)",
+        title: "High altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -4327,7 +4327,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 8 },
         category: "Surface report sequences (land)",
-        title: "(High altitude station)",
+        title: "High altitude station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 32 },
@@ -4347,7 +4347,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 11 },
         category: "Surface report sequences (land)",
-        title: "(Main part of data for representation of METAR/SPECI code in BUFR)",
+        title: "Main part of data for representation of METAR/SPECI code in BUFR",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 63 },
@@ -4371,7 +4371,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 12 },
         category: "Surface report sequences (land)",
-        title: "(Horizontal visibility)",
+        title: "Horizontal visibility",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 3, y: 0 },
@@ -4384,7 +4384,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 13 },
         category: "Surface report sequences (land)",
-        title: "(Runway visual range)",
+        title: "Runway visual range",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 6, y: 0 },
@@ -4400,7 +4400,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 14 },
         category: "Surface report sequences (land)",
-        title: "(Significant present or forecast weather)",
+        title: "Significant present or forecast weather",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -4411,7 +4411,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 15 },
         category: "Surface report sequences (land)",
-        title: "(Clouds group(s))",
+        title: "Clouds group(s)",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -4423,7 +4423,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 16 },
         category: "Surface report sequences (land)",
-        title: "(Significant recent weather phenomena)",
+        title: "Significant recent weather phenomena",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -4434,7 +4434,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 17 },
         category: "Surface report sequences (land)",
-        title: "(Wind shear on runway(s))",
+        title: "Wind shear on runway(s)",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -4445,7 +4445,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 18 },
         category: "Surface report sequences (land)",
-        title: "(Trend-type landing forecast)",
+        title: "Trend-type landing forecast",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 16 },
@@ -4469,7 +4469,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 20 },
         category: "Surface report sequences (land)",
-        title: "(Short METAR/SPECI)",
+        title: "Short METAR/SPECI",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 11 },
@@ -4480,7 +4480,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 21 },
         category: "Surface report sequences (land)",
-        title: "(Total sequence for representation of METAR/SPECI code in BUFR)",
+        title: "Total sequence for representation of METAR/SPECI code in BUFR",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 11 },
@@ -4497,7 +4497,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 22 },
         category: "Surface report sequences (land)",
-        title: "(Ground-based GNSS data)",
+        title: "Ground-based GNSS data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 15 },
@@ -4536,7 +4536,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 24 },
         category: "Surface report sequences (land)",
-        title: "(Ground-based GNSS data - slant total delay)",
+        title: "Ground-based GNSS data - slant total delay",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -4611,7 +4611,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 30 },
         category: "Surface report sequences (land)",
-        title: "(Ozone data - single observation)",
+        title: "Ozone data - single observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 15, y: 1 },
@@ -4621,7 +4621,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 31 },
         category: "Surface report sequences (land)",
-        title: "(Ozone data - averaged observations)",
+        title: "Ozone data - averaged observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 22 },
@@ -4636,7 +4636,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 41 },
         category: "Surface report sequences (land)",
-        title: "(Total ozone measurement from a Brewer ground-based spectrophotometer obtained from a single observation)",
+        title: "Total ozone measurement from a Brewer ground-based spectrophotometer obtained from a single observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -4651,7 +4651,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 42 },
         category: "Surface report sequences (land)",
-        title: "(Total ozone measurement from a Brewer ground-based spectrophotometer obtained from averaged observations)",
+        title: "Total ozone measurement from a Brewer ground-based spectrophotometer obtained from averaged observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -4668,7 +4668,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 43 },
         category: "Surface report sequences (land)",
-        title: "(Total ozone measurement from a Dobson ground-based spectrophotometer obtained from a single observation)",
+        title: "Total ozone measurement from a Dobson ground-based spectrophotometer obtained from a single observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -4683,7 +4683,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 44 },
         category: "Surface report sequences (land)",
-        title: "(Total ozone measurement from a Dobson ground-based spectrophotometer obtained from averaged observations)",
+        title: "Total ozone measurement from a Dobson ground-based spectrophotometer obtained from averaged observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -4700,7 +4700,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 45 },
         category: "Surface report sequences (land)",
-        title: "(Main part of METAR/SPECI), replacing 3 07 011",
+        title: "Main part of METAR/SPECI), replacing 3 07 011",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 63 },
@@ -4735,7 +4735,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 46 },
         category: "Surface report sequences (land)",
-        title: "(METAR/SPECI visibility)",
+        title: "METAR/SPECI visibility",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 20, y: 60 },
@@ -4748,7 +4748,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 47 },
         category: "Surface report sequences (land)",
-        title: "(METAR/SPECI/TAF clouds), replacing 3 07 015",
+        title: "METAR/SPECI/TAF clouds), replacing 3 07 015",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 5, y: 0 },
@@ -4765,7 +4765,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 48 },
         category: "Surface report sequences (land)",
-        title: "(Trend type forecast), replacing 3 07 018",
+        title: "Trend type forecast), replacing 3 07 018",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 16 },
@@ -4798,7 +4798,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 49 },
         category: "Surface report sequences (land)",
-        title: "(Sea conditions)",
+        title: "Sea conditions",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 2, y: 0 },
@@ -4810,7 +4810,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 50 },
         category: "Surface report sequences (land)",
-        title: "(Runway state)",
+        title: "Runway state",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -4832,7 +4832,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 51 },
         category: "Surface report sequences (land)",
-        title: "(Full METAR/SPECI), replacing 3 07 021",
+        title: "Full METAR/SPECI), replacing 3 07 021",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 45 },
@@ -4852,7 +4852,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 52 },
         category: "Surface report sequences (land)",
-        title: "(Aerodrome forecast identification and time interval)",
+        title: "Aerodrome forecast identification and time interval",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 63 },
@@ -4874,7 +4874,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 53 },
         category: "Surface report sequences (land)",
-        title: "(Forecast weather at an aerodrome)",
+        title: "Forecast weather at an aerodrome",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -4898,7 +4898,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 54 },
         category: "Surface report sequences (land)",
-        title: "(Forecast of extreme temperatures)",
+        title: "Forecast of extreme temperatures",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 32 },
@@ -4919,7 +4919,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 55 },
         category: "Surface report sequences (land)",
-        title: "(Change indicator and forecast changes)",
+        title: "Change indicator and forecast changes",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 33, y: 45 },
@@ -4936,7 +4936,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 56 },
         category: "Surface report sequences (land)",
-        title: "(Aerodrome forecast - full TAF)",
+        title: "Aerodrome forecast - full TAF",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 52 },
@@ -4950,7 +4950,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 60 },
         category: "Surface report sequences (land)",
-        title: "(Soil temperature below land surface)",
+        title: "Soil temperature below land surface",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 61 },
@@ -4960,7 +4960,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 61 },
         category: "Surface report sequences (land)",
-        title: "(Soil temperature data at number of depths not exceeding five - high accuracy position)",
+        title: "Soil temperature data at number of depths not exceeding five - high accuracy position",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -4971,7 +4971,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 62 },
         category: "Surface report sequences (land)",
-        title: "(Soil temperature data at number of depths not exceeding five - coarse accuracy position)",
+        title: "Soil temperature data at number of depths not exceeding five - coarse accuracy position",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 32 },
@@ -4982,7 +4982,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 63 },
         category: "Surface report sequences (land)",
-        title: "(Depth below land surface and soil temperature)",
+        title: "Depth below land surface and soil temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 61 },
@@ -4996,7 +4996,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 64 },
         category: "Surface report sequences (land)",
-        title: "(Soil temperature profile including permafrost)",
+        title: "Soil temperature profile including permafrost",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 25 },
@@ -5017,7 +5017,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 71 },
         category: "Surface report sequences (land)",
-        title: "(Monthly values of a land station)",
+        title: "Monthly values of a land station",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5124,7 +5124,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 72 },
         category: "Surface report sequences (land)",
-        title: "(Monthly normals for a land station)",
+        title: "Monthly normals for a land station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 1 },
@@ -5186,7 +5186,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 73 },
         category: "Surface report sequences (land)",
-        title: "(Representation of CLIMAT data of the actual month and for monthly normals)",
+        title: "Representation of CLIMAT data of the actual month and for monthly normals",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 71 },
@@ -5196,7 +5196,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 74 },
         category: "Surface report sequences (land)",
-        title: "(Supplemental daily temperature and precipitation values for monthly climate report)",
+        title: "Supplemental daily temperature and precipitation values for monthly climate report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -5228,7 +5228,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 75 },
         category: "Surface report sequences (land)",
-        title: "(Supplemental daily temperature and precipitation values with the time of occurrence for monthly climate report (DAYCLI))",
+        title: "Supplemental daily temperature and precipitation values with the time of occurrence for monthly climate report (DAYCLI)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -5276,7 +5276,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 76 },
         category: "Surface report sequences (land)",
-        title: "(Monthly values from a land station in compliance with regional or national reporting practices)",
+        title: "Monthly values from a land station in compliance with regional or national reporting practices",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5384,7 +5384,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 77 },
         category: "Surface report sequences (land)",
-        title: "(Monthly normals for a land station in compliance with regional or national reporting practices)",
+        title: "Monthly normals for a land station in compliance with regional or national reporting practices",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 1 },
@@ -5447,7 +5447,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 78 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of monthly values suitable for CLIMAT data in compliance with regional or national reporting practices)",
+        title: "Sequence for representation of monthly values suitable for CLIMAT data in compliance with regional or national reporting practices",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 76 },
@@ -5457,7 +5457,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 79 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from fixed land stations suitable for SYNOP data and for maritime data from coastal stations)",
+        title: "Sequence for representation of synoptic reports from fixed land stations suitable for SYNOP data and for maritime data from coastal stations",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5495,7 +5495,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 80 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5516,7 +5516,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 81 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA I)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA I",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5584,7 +5584,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 83 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA III)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA III",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 2, y: 35 },
@@ -5608,7 +5608,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 84 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA IV)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA IV",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5633,7 +5633,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 86 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA VI)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA VI",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -5652,7 +5652,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 87 },
         category: "Surface report sequences (land)",
-        title: "(\"Instantaneous\" parameters of sequence 3 07 089)",
+        title: "\"Instantaneous\" parameters of sequence 3 07 089",
         sub_title: "Surface station identification, time, horizontal and vertical coordinates",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -5689,7 +5689,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 88 },
         category: "Surface report sequences (land)",
-        title: "(\"Period\" parameters of sequence 3 07 089)",
+        title: "\"Period\" parameters of sequence 3 07 089",
         sub_title: "Present and past weather",
         elements: &[
             Descriptor { f: 0, x: 20, y: 3 },
@@ -5730,7 +5730,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 89 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data manually encoded in CREX)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data manually encoded in CREX",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 87 },
@@ -5740,7 +5740,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 90 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a mobile land station suitable for SYNOP MOBIL data)",
+        title: "Sequence for representation of synoptic reports from a mobile land station suitable for SYNOP MOBIL data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 92 },
@@ -5761,7 +5761,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 91 },
         category: "Surface report sequences (land)",
-        title: "(BUFR template for surface observations from one-hour period with national and WMO station identification)",
+        title: "BUFR template for surface observations from one-hour period with national and WMO station identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 89 },
@@ -5835,7 +5835,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 92 },
         category: "Surface report sequences (land)",
-        title: "(BUFR template for surface observations from n-minute period)",
+        title: "BUFR template for surface observations from n-minute period",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -5999,7 +5999,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 96 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of SYNOP with supplementary information on one-hour observations)",
+        title: "Sequence for representation of SYNOP with supplementary information on one-hour observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -6015,7 +6015,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 101 },
         category: "Surface report sequences (land)",
-        title: "(Snow observation)",
+        title: "Snow observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 89 },
@@ -6040,7 +6040,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 102 },
         category: "Surface report sequences (land)",
-        title: "(Road weather information)",
+        title: "Road weather information",
         sub_title: "Station identification",
         elements: &[
             Descriptor { f: 3, x: 1, y: 89 },
@@ -6117,7 +6117,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 7, y: 103 },
         category: "Surface report sequences (land)",
-        title: "(Snow observation, snow density, snow water equivalent)",
+        title: "Snow observation, snow density, snow water equivalent",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -6136,9 +6136,72 @@ pub static TABLE_D: [TableDEntry; 641] = [
         ],
     },
     TableDEntry {
+        xy: XY { x: 7, y: 104 },
+        category: "Surface report sequences (land)",
+        title: "Cryo station temperature profile",
+        sub_title: "",
+        elements: &[
+            Descriptor { f: 3, x: 1, y: 150 },
+            Descriptor { f: 0, x: 1, y: 19 },
+            Descriptor { f: 0, x: 2, y: 1 },
+            Descriptor { f: 3, x: 1, y: 11 },
+            Descriptor { f: 3, x: 1, y: 13 },
+            Descriptor { f: 3, x: 1, y: 21 },
+            Descriptor { f: 0, x: 7, y: 30 },
+            Descriptor { f: 0, x: 8, y: 29 },
+            Descriptor {
+                f: 0,
+                x: 13,
+                y: 115,
+            },
+            Descriptor { f: 0, x: 20, y: 62 },
+            Descriptor {
+                f: 0,
+                x: 13,
+                y: 119,
+            },
+            Descriptor { f: 0, x: 2, y: 177 },
+            Descriptor { f: 0, x: 8, y: 10 },
+            Descriptor {
+                f: 0,
+                x: 12,
+                y: 161,
+            },
+            Descriptor { f: 1, x: 11, y: 0 },
+            Descriptor { f: 0, x: 31, y: 1 },
+            Descriptor { f: 0, x: 7, y: 34 },
+            Descriptor { f: 0, x: 2, y: 96 },
+            Descriptor {
+                f: 0,
+                x: 12,
+                y: 101,
+            },
+            Descriptor {
+                f: 0,
+                x: 12,
+                y: 131,
+            },
+            Descriptor { f: 2, x: 1, y: 131 },
+            Descriptor { f: 2, x: 2, y: 129 },
+            Descriptor {
+                f: 0,
+                x: 12,
+                y: 130,
+            },
+            Descriptor { f: 2, x: 2, y: 0 },
+            Descriptor { f: 2, x: 1, y: 0 },
+            Descriptor {
+                f: 0,
+                x: 12,
+                y: 133,
+            },
+            Descriptor { f: 0, x: 13, y: 82 },
+        ],
+    },
+    TableDEntry {
         xy: XY { x: 7, y: 182 },
         category: "Surface report sequences (land)",
-        title: "(Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA II)",
+        title: "Sequence for representation of synoptic reports from a fixed land station suitable for SYNOP data in compliance with reporting practices in RA II",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 90 },
@@ -6169,7 +6232,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 1 },
         category: "Surface report sequences (sea)",
-        title: "(Buoy/platform - fixed)",
+        title: "Buoy/platform - fixed",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 33 },
@@ -6180,7 +6243,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 2 },
         category: "Surface report sequences (sea)",
-        title: "(Buoy/platform - fixed)",
+        title: "Buoy/platform - fixed",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 34 },
@@ -6191,7 +6254,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 3 },
         category: "Surface report sequences (sea)",
-        title: "(Buoy/platform - moving)",
+        title: "Buoy/platform - moving",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 35 },
@@ -6202,7 +6265,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 4 },
         category: "Surface report sequences (sea)",
-        title: "(Ship)",
+        title: "Ship",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 36 },
@@ -6223,7 +6286,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 6 },
         category: "Surface report sequences (sea)",
-        title: "(Buoy Section 1 optional parameters)",
+        title: "Buoy Section 1 optional parameters",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 4 },
@@ -6251,7 +6314,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 9 },
         category: "Surface report sequences (sea)",
-        title: "(Sequence for representation of synoptic reports from a sea station suitable for SHIP data)",
+        title: "Sequence for representation of synoptic reports from a sea station suitable for SHIP data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 93 },
@@ -6266,7 +6329,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 10 },
         category: "Surface report sequences (sea)",
-        title: "(TRACKOB template)",
+        title: "TRACKOB template",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -6290,7 +6353,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 11 },
         category: "Surface report sequences (sea)",
-        title: "(Monthly values from an ocean weather station - CLIMAT SHIP)",
+        title: "Monthly values from an ocean weather station - CLIMAT SHIP",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -6329,7 +6392,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 12 },
         category: "Surface report sequences (sea)",
-        title: "(Monthly normals for an ocean weather station)",
+        title: "Monthly normals for an ocean weather station",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 4, y: 1 },
@@ -6369,7 +6432,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 13 },
         category: "Surface report sequences (sea)",
-        title: "(Representation of CLIMAT SHIP data of the actual month and for monthly normals)",
+        title: "Representation of CLIMAT SHIP data of the actual month and for monthly normals",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 8, y: 11 },
@@ -6379,7 +6442,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 14 },
         category: "Surface report sequences (sea)",
-        title: "(Synoptic reports from sea stations suitable for VOS observation data)",
+        title: "Synoptic reports from sea stations suitable for VOS observation data",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -6409,7 +6472,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 15 },
         category: "Surface report sequences (sea)",
-        title: "(Template for WAVEOB data expressed as frequency (Ia = 0 in FM-65 WAVEOB)",
+        title: "Template for WAVEOB data expressed as frequency (Ia = 0 in FM-65 WAVEOB",
         sub_title: "Identification (WAVEOB Section 0)",
         elements: &[
             Descriptor { f: 0, x: 1, y: 3 },
@@ -6502,7 +6565,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 16 },
         category: "Surface report sequences (sea)",
-        title: "(Template for WAVEOB data expressed as the wave number (Ia = 1 in FM-65 WAVEOB)",
+        title: "Template for WAVEOB data expressed as the wave number (Ia = 1 in FM-65 WAVEOB",
         sub_title: "Identification (WAVEOB Section 0)",
         elements: &[
             Descriptor { f: 0, x: 1, y: 3 },
@@ -6595,7 +6658,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 17 },
         category: "Surface report sequences (sea)",
-        title: "(Sequence for reporting observations from offshore platforms)",
+        title: "Sequence for reporting observations from offshore platforms",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 56 },
@@ -6623,7 +6686,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 18 },
         category: "Surface report sequences (sea)",
-        title: "(Sequence for reporting of basic ship AWS observations)",
+        title: "Sequence for reporting of basic ship AWS observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -6641,7 +6704,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 21 },
         category: "Surface report sequences (sea)",
-        title: "(Monthly values from an ocean weather station in compliance with regional or national reporting practices)",
+        title: "Monthly values from an ocean weather station in compliance with regional or national reporting practices",
         sub_title: "Station identification, date/time, horizontal and vertical coordinates",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -6681,7 +6744,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 22 },
         category: "Surface report sequences (sea)",
-        title: "(Monthly normals for an ocean weather station in compliance with regional or national reporting practices)",
+        title: "Monthly normals for an ocean weather station in compliance with regional or national reporting practices",
         sub_title: "Normals of pressure, temperature, vapour pressure and sea/water temperature",
         elements: &[
             Descriptor { f: 0, x: 4, y: 1 },
@@ -6722,7 +6785,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 8, y: 23 },
         category: "Surface report sequences (sea)",
-        title: "(Sequence for representation of monthly values suitable for CLIMAT SHIP data in compliance with regional or national reporting practices)",
+        title: "Sequence for representation of monthly values suitable for CLIMAT SHIP data in compliance with regional or national reporting practices",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 8, y: 21 },
@@ -6732,7 +6795,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 1 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 37 },
@@ -6744,7 +6807,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 2 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 38 },
@@ -6756,7 +6819,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 3 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 37 },
@@ -6768,7 +6831,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 4 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 38 },
@@ -6780,7 +6843,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 5 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with relative humidity)",
+        title: "Vertical sounding with relative humidity",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 37 },
@@ -6793,7 +6856,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 6 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with relative humidity)",
+        title: "Vertical sounding with relative humidity",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 38 },
@@ -6806,7 +6869,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 7 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with dewpoint data)",
+        title: "Vertical sounding with dewpoint data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 37 },
@@ -6819,7 +6882,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 8 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with dewpoint data)",
+        title: "Vertical sounding with dewpoint data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 38 },
@@ -6832,7 +6895,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 11 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 39 },
@@ -6844,7 +6907,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 12 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 39 },
@@ -6856,7 +6919,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 13 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with relative humidity)",
+        title: "Vertical sounding with relative humidity",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 39 },
@@ -6869,7 +6932,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 14 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with dewpoint data)",
+        title: "Vertical sounding with dewpoint data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 39 },
@@ -6882,7 +6945,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 15 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 40 },
@@ -6894,7 +6957,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 16 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical wind profile)",
+        title: "Vertical wind profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 40 },
@@ -6906,7 +6969,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 17 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with relative humidity)",
+        title: "Vertical sounding with relative humidity",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 40 },
@@ -6919,7 +6982,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 18 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical sounding with dewpoint data)",
+        title: "Vertical sounding with dewpoint data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 40 },
@@ -6932,7 +6995,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 19 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Wind profiler - wind data sounding)",
+        title: "Wind profiler - wind data sounding",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -6945,7 +7008,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 20 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Wind profiler - Cartesian coordinates)",
+        title: "Wind profiler - Cartesian coordinates",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -6961,7 +7024,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 21 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Single wavelength wind profiler wind data (product data))",
+        title: "Single wavelength wind profiler wind data (product data)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -7002,7 +7065,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 22 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(RASS virtual temperature (product data))",
+        title: "RASS virtual temperature (product data)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -7033,7 +7096,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 23 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Single wavelength elastic backscatter lidar sequence)",
+        title: "Single wavelength elastic backscatter lidar sequence",
         sub_title: "Header section",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -7069,7 +7132,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 24 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Single wavelength wind profiler wind data sequence (product data))",
+        title: "Single wavelength wind profiler wind data sequence (product data)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7096,7 +7159,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 25 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(RASS virtual temperature sequence (product data))",
+        title: "RASS virtual temperature sequence (product data)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7120,7 +7183,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 26 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Single wavelength elastic backscatter lidar sequence)",
+        title: "Single wavelength elastic backscatter lidar sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7157,7 +7220,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 27 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Multi wavelength ground-based lidar sequence)",
+        title: "Multi wavelength ground-based lidar sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7194,7 +7257,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 31 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sonde flight data)",
+        title: "Ozone sonde flight data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 15, y: 4 },
@@ -7210,7 +7273,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 45 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sounding not coupled to a ground-based spectrophotometer)",
+        title: "Ozone sounding not coupled to a ground-based spectrophotometer",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 75 },
@@ -7221,7 +7284,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 46 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sounding coupled to measurements from a Brewer ground-based spectrophotometer; the total ozone obtained from the Brewer is a single value)",
+        title: "Ozone sounding coupled to measurements from a Brewer ground-based spectrophotometer; the total ozone obtained from the Brewer is a single value",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 41 },
@@ -7233,7 +7296,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 47 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sounding coupled to measurements from a Brewer ground-based spectrophotometer; the total ozone obtained from the Brewer is an averaged value)",
+        title: "Ozone sounding coupled to measurements from a Brewer ground-based spectrophotometer; the total ozone obtained from the Brewer is an averaged value",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 42 },
@@ -7245,7 +7308,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 48 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sounding coupled to measurements from a Dobson ground-based spectrophotometer; the total ozone obtained from the Dobson is a single value)",
+        title: "Ozone sounding coupled to measurements from a Dobson ground-based spectrophotometer; the total ozone obtained from the Dobson is a single value",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 43 },
@@ -7257,7 +7320,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 49 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ozone sounding coupled to measurements from a Dobson ground-based spectrophotometer; the total ozone obtained from the Dobson is an averaged value)",
+        title: "Ozone sounding coupled to measurements from a Dobson ground-based spectrophotometer; the total ozone obtained from the Dobson is an averaged value",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 7, y: 44 },
@@ -7269,7 +7332,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 50 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of PILOT, PILOT SHIP and PILOT MOBIL observation type data with pressure as the vertical coordinate)",
+        title: "Sequence for representation of PILOT, PILOT SHIP and PILOT MOBIL observation type data with pressure as the vertical coordinate",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 110 },
@@ -7286,7 +7349,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 51 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of PILOT, PILOT SHIP and PILOT MOBIL observation type data with height as the vertical coordinate)",
+        title: "Sequence for representation of PILOT, PILOT SHIP and PILOT MOBIL observation type data with height as the vertical coordinate",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 110 },
@@ -7303,7 +7366,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 52 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of TEMP, TEMP SHIP and TEMP MOBIL observation type data)",
+        title: "Sequence for representation of TEMP, TEMP SHIP and TEMP MOBIL observation type data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 111 },
@@ -7322,7 +7385,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 53 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of TEMP DROP observation type data)",
+        title: "Sequence for representation of TEMP DROP observation type data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 112 },
@@ -7339,7 +7402,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 54 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of CLIMAT TEMP and CLIMAT TEMP SHIP data)",
+        title: "Sequence for representation of CLIMAT TEMP and CLIMAT TEMP SHIP data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -7382,7 +7445,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 55 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Template for the representation of high resolution radiosonde data with geopotential height as the vertical coordinate)",
+        title: "Template for the representation of high resolution radiosonde data with geopotential height as the vertical coordinate",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 111 },
@@ -7417,7 +7480,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 56 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of radiosonde descent data)",
+        title: "Sequence for representation of radiosonde descent data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -7439,7 +7502,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 57 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of TEMP, TEMP SHIP and TEMP MOBIL observation type data with higher precision of pressure and geopotential height)",
+        title: "Sequence for representation of TEMP, TEMP SHIP and TEMP MOBIL observation type data with higher precision of pressure and geopotential height",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -7460,7 +7523,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 60 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Radiosonde complete registration and surface observation)",
+        title: "Radiosonde complete registration and surface observation",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 123 },
@@ -7472,7 +7535,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 61 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Raw PTU)",
+        title: "Raw PTU",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7505,7 +7568,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 62 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Raw GPS unsmoothed wind)",
+        title: "Raw GPS unsmoothed wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7532,7 +7595,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 63 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Raw GPS smoothed wind)",
+        title: "Raw GPS smoothed wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7559,7 +7622,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 64 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Processed PTU)",
+        title: "Processed PTU",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7601,7 +7664,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 65 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Processed GPS)",
+        title: "Processed GPS",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7627,7 +7690,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 66 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Standard and significant levels)",
+        title: "Standard and significant levels",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 120 },
@@ -7661,7 +7724,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 70 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Vertical profile for numerical weather prediction data)",
+        title: "Vertical profile for numerical weather prediction data",
         sub_title: "Identification",
         elements: &[
             Descriptor { f: 0, x: 1, y: 35 },
@@ -7744,7 +7807,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 71 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Sequence for representation of PILOT in the area of ASECNA)",
+        title: "Sequence for representation of PILOT in the area of ASECNA",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -7765,7 +7828,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 72 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ground-based microwave radiometer brightness temperature observations (Lv 1))",
+        title: "Ground-based microwave radiometer brightness temperature observations (Lv 1)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7822,7 +7885,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 9, y: 73 },
         category: "Vertical sounding sequences (conventional data)",
-        title: "(Ground based microwave radiometer retrieval products (Lv2))",
+        title: "Ground-based microwave radiometer retrieval products (Lv2)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 132 },
@@ -7871,7 +7934,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 1 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite - brightness temperature)",
+        title: "Satellite - brightness temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 42 },
@@ -7884,7 +7947,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 2 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite - low level)",
+        title: "Satellite - low level",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 42 },
@@ -7897,7 +7960,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 3 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite - high level)",
+        title: "Satellite - high level",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 42 },
@@ -7910,7 +7973,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 4 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite - precipitable water)",
+        title: "Satellite - precipitable water",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 42 },
@@ -7965,7 +8028,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 8 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATOVS HIRS report)",
+        title: "ATOVS HIRS report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 11 },
@@ -7981,7 +8044,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 9 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATOVS AMSU-A report)",
+        title: "ATOVS AMSU-A report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 11 },
@@ -7992,7 +8055,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 10 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATOVS AMSU-B/MHS report)",
+        title: "ATOVS AMSU-B/MHS report",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 11 },
@@ -8003,7 +8066,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 11 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATOVS field of view variables)",
+        title: "ATOVS field of view variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 70 },
@@ -8056,7 +8119,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 12 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATOVS channel variables)",
+        title: "ATOVS channel variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 150 },
@@ -8074,7 +8137,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 13 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(AVHRR (GAC) report)",
+        title: "AVHRR (GAC) report",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8144,7 +8207,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 14 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite - geostationary wind data)",
+        title: "Satellite - geostationary wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 72 },
@@ -8155,7 +8218,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 15 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Meteosat radiance data)",
+        title: "Meteosat radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 72 },
@@ -8176,7 +8239,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 16 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Meteosat Second Generation (MSG) radiance data)",
+        title: "Meteosat Second Generation (MSG) radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 72 },
@@ -8197,7 +8260,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 18 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Ozone data)",
+        title: "Ozone data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8246,7 +8309,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 19 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Ozone data)",
+        title: "Ozone data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8326,7 +8389,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 20 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Retrieved ozone data)",
+        title: "Retrieved ozone data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 22 },
@@ -8340,7 +8403,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 21 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Integrated ozone density, height of defined layer)",
+        title: "Integrated ozone density, height of defined layer",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 8, y: 0 },
@@ -8358,7 +8421,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 22 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite identifier, instrument and product type)",
+        title: "Satellite identifier, instrument and product type",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8370,7 +8433,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 23 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Geostationary multi-channel satellite radiance data)",
+        title: "Geostationary multi-channel satellite radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 72 },
@@ -8395,7 +8458,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 24 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Geostationary three-channel satellite radiance data)",
+        title: "Geostationary three-channel satellite radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 72 },
@@ -8420,7 +8483,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 25 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(SSMIS temperature data record)",
+        title: "SSMIS temperature data record",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8493,7 +8556,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 26 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite radio occultation data)",
+        title: "Satellite radio occultation data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 22 },
@@ -8583,7 +8646,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 28 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(All sky radiance product main sequence)",
+        title: "All sky radiance product main sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 71 },
@@ -8603,7 +8666,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 29 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Layer, ozone, height, temperature and water vapour)",
+        title: "Layer, ozone, height, temperature and water vapour",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 10, y: 0 },
@@ -8627,7 +8690,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 30 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(MIPAS or GOMOS instruments reporting)",
+        title: "MIPAS or GOMOS instruments reporting",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 22 },
@@ -8641,7 +8704,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 50 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite collocated 1C reports with 3 instruments)",
+        title: "Satellite collocated 1C reports with 3 instruments",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 51 },
@@ -8663,7 +8726,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 51 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite position and instrument temperatures)",
+        title: "Satellite position and instrument temperatures",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8687,7 +8750,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 52 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite instrument type and position)",
+        title: "Satellite instrument type and position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 19 },
@@ -8707,7 +8770,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 53 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite channels and brightness temperatures with expanded channel set)",
+        title: "Satellite channels and brightness temperatures with expanded channel set",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 134 },
@@ -8725,7 +8788,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 54 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite visible channels and albedos with expanded channel set)",
+        title: "Satellite visible channels and albedos with expanded channel set",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 134 },
@@ -8746,7 +8809,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 55 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite radiance/channel principal components)",
+        title: "Satellite radiance/channel principal components",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 51 },
@@ -8762,7 +8825,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 60 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(CrIS (Cross-Track Infrared Sounder) radiance data)",
+        title: "CrIS (Cross-Track Infrared Sounder) radiance data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8835,7 +8898,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 61 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(ATMS (Advanced Technology Microwave Sounder) data)",
+        title: "ATMS (Advanced Technology Microwave Sounder) data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8893,7 +8956,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 62 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VIIRS (Visible/Infrared Imager Radiometer Suite) data)",
+        title: "VIIRS (Visible/Infrared Imager Radiometer Suite) data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8935,7 +8998,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 63 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(SST (Sea-surface temperature) data)",
+        title: "SST (Sea-surface temperature) data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -8978,7 +9041,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 64 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(AOT (Aerosol optical thickness) data)",
+        title: "AOT (Aerosol optical thickness) data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -9020,7 +9083,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 65 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(OMPS (Ozone mapping and profiler suite) nadir profile data)",
+        title: "OMPS (Ozone mapping and profiler suite) nadir profile data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -9077,7 +9140,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 66 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(OMPS (Ozone mapping and profiler suite) total column data)",
+        title: "OMPS (Ozone mapping and profiler suite) total column data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -9136,7 +9199,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 67 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite-derived winds)",
+        title: "Satellite-derived winds",
         sub_title: "Processing information",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -9299,7 +9362,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 68 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VASS field of view variables)",
+        title: "VASS field of view variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 70 },
@@ -9360,7 +9423,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 69 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VASS channel variables)",
+        title: "VASS channel variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 42 },
@@ -9380,7 +9443,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 70 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VASS MWTS report of FY-3)",
+        title: "VASS MWTS report of FY-3",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 68 },
@@ -9391,7 +9454,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 71 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VASS MWHS report of FY-3)",
+        title: "VASS MWHS report of FY-3",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 68 },
@@ -9402,7 +9465,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 72 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(VASS IRAS report of FY-3)",
+        title: "VASS IRAS report of FY-3",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 68 },
@@ -9413,7 +9476,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 77 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite-derived winds)",
+        title: "Satellite-derived winds",
         sub_title: "Processing information",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -9576,7 +9639,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 78 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Satellite sounding data)",
+        title: "Satellite sounding data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -9639,7 +9702,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 80 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Ice Cloud Imager Data (level 1B))",
+        title: "Ice Cloud Imager Data (level 1B)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -9911,7 +9974,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 81 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Microwave Imager Data (level 1B))",
+        title: "Microwave Imager Data (level 1B)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -10209,7 +10272,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 82 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Microwave Sounder Data (level 1B))",
+        title: "Microwave Sounder Data (level 1B)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 70 },
@@ -10307,7 +10370,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 83 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Scatterometer (SCA) Sigma zero full resolution level 1B (SZF))",
+        title: "Metop-SG Scatterometer (SCA) Sigma zero full resolution level 1B (SZF)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -10352,7 +10415,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 84 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Scatterometer (SCA) Sigma zero resampled level 1B (SZR))",
+        title: "Metop-SG Scatterometer (SCA) Sigma zero resampled level 1B (SZR)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -10396,7 +10459,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 85 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(IASI-NG L1C (Radiances))",
+        title: "IASI-NG L1C (Radiances)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -10459,7 +10522,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 86 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(IASI-NG L1D (Principal component scores))",
+        title: "IASI-NG L1D (Principal component scores)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -10534,7 +10597,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 87 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 common information part (TWV, CLD, SFC, GHG))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 common information part (TWV, CLD, SFC, GHG)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -10605,7 +10668,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 88 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 temperature and water vapour profiles (TWV))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 temperature and water vapour profiles (TWV)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 87 },
@@ -10647,7 +10710,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 89 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 cloud detection (CLD))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 cloud detection (CLD)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 87 },
@@ -10691,7 +10754,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 90 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 surface parameters (SFC))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 surface parameters (SFC)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 87 },
@@ -10718,7 +10781,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 91 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 total columns of nitrous oxide, methane and carbon dioxide (GHG))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 total columns of nitrous oxide, methane and carbon dioxide (GHG)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 87 },
@@ -10732,7 +10795,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 92 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 common information part (IASI NG L2 CO)",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 common information part (IASI NG L2 CO",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -10769,7 +10832,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 93 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 carbon monoxide total column, carbon monoxide profile (CO)",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 carbon monoxide total column, carbon monoxide profile (CO",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 92 },
@@ -10791,7 +10854,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 94 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 nitric acid total column, nitric acid profile (NAC) and level 2 ozone total column, ozone profile (O3)",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 nitric acid total column, nitric acid profile (NAC) and level 2 ozone total column, ozone profile (O3",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 92 },
@@ -10814,7 +10877,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 95 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 sulphur dioxide total column (SO2))",
+        title: "Metop-SG Infrared Atmospheric Sounder Interferometer - New Generation (IASI-NG), level 2 sulphur dioxide total column (SO2)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 92 },
@@ -10835,7 +10898,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 96 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Visible Infrared Imager (VII), level 2 common part for VII L2 CLD, CTP, OCA, WVI, WVV)",
+        title: "Metop-SG Visible Infrared Imager (VII), level 2 common part for VII L2 CLD, CTP, OCA, WVI, WVV",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 5 },
@@ -10861,7 +10924,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 97 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Visible Infrared Imager (VII), level 2 cloud mask, cloud detection (CLD))",
+        title: "Metop-SG Visible Infrared Imager (VII), level 2 cloud mask, cloud detection (CLD)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 96 },
@@ -10875,7 +10938,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 98 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Visible Infrared Imager (VII), level 2 cloud top temperature (CTP))",
+        title: "Metop-SG Visible Infrared Imager (VII), level 2 cloud top temperature (CTP)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 96 },
@@ -10892,7 +10955,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 99 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Visible Infrared Imager (VII), level 2 optimal cloud analysis (OCA))",
+        title: "Metop-SG Visible Infrared Imager (VII), level 2 optimal cloud analysis (OCA)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 96 },
@@ -10946,7 +11009,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 100 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(Metop-SG Visible Infrared Imager (VII), level 2 Total precipitable water IR and VIS (WVI and WVV))",
+        title: "Metop-SG Visible Infrared Imager (VII), level 2 total precipitable water IR and VIS (WVI and WVV)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 96 },
@@ -10970,7 +11033,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 10, y: 191 },
         category: "Vertical sounding sequences (satellite data)",
-        title: "(FY-4 Geostationary Interferometric Infrared Sounder (GIIRS))",
+        title: "FY-4 Geostationary Interferometric Infrared Sounder (GIIRS)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -11042,7 +11105,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 1 },
         category: "Single level report sequences (conventional data)",
-        title: "(Aircraft reports)",
+        title: "Aircraft reports",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 51 },
@@ -11059,7 +11122,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 2 },
         category: "Single level report sequences (conventional data)",
-        title: "(ACARS reports)",
+        title: "ACARS reports",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 65 },
@@ -11071,7 +11134,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 3 },
         category: "Single level report sequences (conventional data)",
-        title: "(ACARS standard reported variables)",
+        title: "ACARS standard reported variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 10, y: 70 },
@@ -11084,7 +11147,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 4 },
         category: "Single level report sequences (conventional data)",
-        title: "(ACARS supplementary reported variables)",
+        title: "ACARS supplementary reported variables",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -11110,7 +11173,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 5 },
         category: "Single level report sequences (conventional data)",
-        title: "(Standard AMDAR reports)",
+        title: "Standard AMDAR reports",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 8 },
@@ -11135,7 +11198,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 6 },
         category: "Single level report sequences (conventional data)",
-        title: "(AMDAR data or aircraft data for one level without latitude/longitude)",
+        title: "AMDAR data or aircraft data for one level without latitude/longitude",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 10 },
@@ -11157,7 +11220,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 7 },
         category: "Single level report sequences (conventional data)",
-        title: "(Aircraft data for one level with latitude/longitude indicated)",
+        title: "Aircraft data for one level with latitude/longitude indicated",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 10 },
@@ -11180,7 +11243,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 8 },
         category: "Single level report sequences (conventional data)",
-        title: "(Aircraft ascent/descent profile without latitude/longitude indicated at each level)",
+        title: "Aircraft ascent/descent profile without latitude/longitude indicated at each level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 8 },
@@ -11196,7 +11259,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 9 },
         category: "Single level report sequences (conventional data)",
-        title: "(Aircraft ascent/descent profile with latitude/longitude given for each level)",
+        title: "Aircraft ascent/descent profile with latitude/longitude given for each level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 8 },
@@ -11212,7 +11275,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 10 },
         category: "Single level report sequences (conventional data)",
-        title: "(BUFR template for AMDAR, version 7)",
+        title: "BUFR template for AMDAR, version 7",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 8 },
@@ -11357,7 +11420,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 11 },
         category: "Single level report sequences (conventional data)",
-        title: "(IAGOS template for a single observation), version 2",
+        title: "IAGOS template for a single observation), version 2",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 23 },
@@ -11412,7 +11475,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 12 },
         category: "Single level report sequences (conventional data)",
-        title: "(BUFR template for aircraft ascent/descent profile with latitude and longitude given for each level)",
+        title: "BUFR template for aircraft ascent/descent profile with latitude and longitude given for each level",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -11440,7 +11503,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 11, y: 13 },
         category: "Single level report sequences (conventional data)",
-        title: "(Uncrewed aircraft systems (UAS))",
+        title: "Uncrewed aircraft systems (UAS)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -11548,7 +11611,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 10 },
         category: "Single level report sequences (satellite data)",
-        title: "(Orbital information, Part I)",
+        title: "Orbital information, Part I",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -11562,7 +11625,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 11 },
         category: "Single level report sequences (satellite data)",
-        title: "(Orbital information, Part II)",
+        title: "Orbital information, Part II",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 2, y: 131 },
@@ -11579,7 +11642,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 12 },
         category: "Single level report sequences (satellite data)",
-        title: "(HIRS brightness temperatures - channels 1-19)",
+        title: "HIRS brightness temperatures - channels 1-19",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 2, y: 129 },
@@ -11593,7 +11656,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 13 },
         category: "Single level report sequences (satellite data)",
-        title: "(HIRS brightness temperatures - channel 20)",
+        title: "HIRS brightness temperatures - channel 20",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 42 },
@@ -11607,7 +11670,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 14 },
         category: "Single level report sequences (satellite data)",
-        title: "(HIRS satellite data)",
+        title: "HIRS satellite data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 10 },
@@ -11623,7 +11686,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 15 },
         category: "Single level report sequences (satellite data)",
-        title: "(MSU brightness temperatures - channels 1-4)",
+        title: "MSU brightness temperatures - channels 1-4",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 9, y: 11 },
@@ -11641,7 +11704,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 16 },
         category: "Single level report sequences (satellite data)",
-        title: "(MSU satellite data)",
+        title: "MSU satellite data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 10 },
@@ -11652,7 +11715,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 17 },
         category: "Single level report sequences (satellite data)",
-        title: "(SSU brightness temperatures - channels 1-3)",
+        title: "SSU brightness temperatures - channels 1-3",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 9, y: 8 },
@@ -11670,7 +11733,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 18 },
         category: "Single level report sequences (satellite data)",
-        title: "(SSU satellite data)",
+        title: "SSU satellite data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 10 },
@@ -11681,7 +11744,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 19 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wave scatterometer product with width change for wave number (spectral))",
+        title: "Wave scatterometer product with width change for wave number (spectral)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11702,7 +11765,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 20 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wave scatterometer product)",
+        title: "Wave scatterometer product",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11721,7 +11784,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 21 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wind scatterometer product)",
+        title: "Wind scatterometer product",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11735,7 +11798,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 22 },
         category: "Single level report sequences (satellite data)",
-        title: "(Radar altimeter product)",
+        title: "Radar altimeter product",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11758,7 +11821,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 23 },
         category: "Single level report sequences (satellite data)",
-        title: "(ATSR sea-surface temperature product)",
+        title: "ATSR sea-surface temperature product",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11773,7 +11836,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 24 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wave scatterometer product enhanced)",
+        title: "Wave scatterometer product enhanced",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 20 },
@@ -11800,7 +11863,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 25 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wave scatterometer enhanced product (with change of width for wave number (spectral))",
+        title: "Wave scatterometer enhanced product (with change of width for wave number (spectral)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 19 },
@@ -11827,7 +11890,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 26 },
         category: "Single level report sequences (satellite data)",
-        title: "(QUIKSCAT data)",
+        title: "QUIKSCAT data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 46 },
@@ -11870,7 +11933,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 27 },
         category: "Single level report sequences (satellite data)",
-        title: "(ATSR SST product (SADIST-2))",
+        title: "ATSR SST product (SADIST-2)",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 47 },
@@ -11887,7 +11950,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 28 },
         category: "Single level report sequences (satellite data)",
-        title: "(SEAWINDS QUIKSCAT data)",
+        title: "SEAWINDS QUIKSCAT data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 46 },
@@ -11937,7 +12000,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 29 },
         category: "Single level report sequences (satellite data)",
-        title: "(Scatterometer level 2b data)",
+        title: "Scatterometer level 2b data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 46 },
@@ -12008,7 +12071,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 30 },
         category: "Single level report sequences (satellite data)",
-        title: "(Wind, formal uncertainty, likelihood)",
+        title: "Wind, formal uncertainty, likelihood",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 130 },
@@ -12033,7 +12096,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 31 },
         category: "Single level report sequences (satellite data)",
-        title: "(SEAWINDS wind)",
+        title: "SEAWINDS wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 34 },
@@ -12065,7 +12128,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 32 },
         category: "Single level report sequences (satellite data)",
-        title: "(SEAWINDS precipitation)",
+        title: "SEAWINDS precipitation",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -12089,7 +12152,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 33 },
         category: "Single level report sequences (satellite data)",
-        title: "(Antenna polarization, brightness temperature)",
+        title: "Antenna polarization, brightness temperature",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 104 },
@@ -12101,7 +12164,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 34 },
         category: "Single level report sequences (satellite data)",
-        title: "(CFOSAT scatterometer data)",
+        title: "CFOSAT scatterometer data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 46 },
@@ -12131,7 +12194,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 35 },
         category: "Single level report sequences (satellite data)",
-        title: "(Scatterometer level 2a data)",
+        title: "Scatterometer level 2a data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12173,7 +12236,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 41 },
         category: "Single level report sequences (satellite data)",
-        title: "(Altitude)",
+        title: "Altitude",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 141 },
@@ -12186,7 +12249,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 42 },
         category: "Single level report sequences (satellite data)",
-        title: "(Altitude corrections)",
+        title: "Altitude corrections",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 21, y: 77 },
@@ -12200,7 +12263,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 45 },
         category: "Single level report sequences (satellite data)",
-        title: "(AATSR sea-surface temperatures)",
+        title: "AATSR sea-surface temperatures",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12261,7 +12324,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 50 },
         category: "Single level report sequences (satellite data)",
-        title: "(MERIS instrument reporting)",
+        title: "MERIS instrument reporting",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12292,7 +12355,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 51 },
         category: "Single level report sequences (satellite data)",
-        title: "(Ocean cross spectra - WVS)",
+        title: "Ocean cross spectra - WVS",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12412,7 +12475,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 52 },
         category: "Single level report sequences (satellite data)",
-        title: "(RA2 - radar altimeter-2)",
+        title: "RA2 - radar altimeter-2",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12649,7 +12712,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 53 },
         category: "Single level report sequences (satellite data)",
-        title: "(Ocean wave spectra)",
+        title: "Ocean wave spectra",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12775,7 +12838,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 55 },
         category: "Single level report sequences (satellite data)",
-        title: "(ASCAT level 1b cell information)",
+        title: "ASCAT level 1b cell information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 33 },
@@ -12792,7 +12855,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 56 },
         category: "Single level report sequences (satellite data)",
-        title: "(Scatterometer wind cell information)",
+        title: "Scatterometer wind cell information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 60 },
@@ -12823,7 +12886,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 57 },
         category: "Single level report sequences (satellite data)",
-        title: "(Ambiguous wind data)",
+        title: "Ambiguous wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 2, x: 1, y: 130 },
@@ -12851,7 +12914,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 58 },
         category: "Single level report sequences (satellite data)",
-        title: "(ASCAT level 1b data)",
+        title: "ASCAT level 1b data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 125 },
@@ -12871,7 +12934,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 59 },
         category: "Single level report sequences (satellite data)",
-        title: "(Scatterometer wind data)",
+        title: "Scatterometer wind data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 56 },
@@ -12883,7 +12946,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 60 },
         category: "Single level report sequences (satellite data)",
-        title: "(Scatterometer soil moisture data)",
+        title: "Scatterometer soil moisture data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 60 },
@@ -12927,7 +12990,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 61 },
         category: "Single level report sequences (satellite data)",
-        title: "(ASCAT level 1b and level 2 data)",
+        title: "ASCAT level 1b and level 2 data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 12, y: 58 },
@@ -12938,7 +13001,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 62 },
         category: "Single level report sequences (satellite data)",
-        title: "(Snow cover)",
+        title: "Snow cover",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -12955,7 +13018,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 70 },
         category: "Single level report sequences (satellite data)",
-        title: "(SMOS data)",
+        title: "SMOS data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -13010,7 +13073,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 12, y: 71 },
         category: "Single level report sequences (satellite data)",
-        title: "(CryoSat-2 SIRAL altimeter)",
+        title: "CryoSat-2 SIRAL altimeter",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -13198,7 +13261,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 9 },
         category: "Sequences common to image data",
-        title: "(Radar reflectivity values)",
+        title: "Radar reflectivity values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 21, y: 1 },
@@ -13210,7 +13273,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 10 },
         category: "Sequences common to image data",
-        title: "(Radar rainfall intensities)",
+        title: "Radar rainfall intensities",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 21, y: 36 },
@@ -13222,7 +13285,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 31 },
         category: "Sequences common to image data",
-        title: "(Non run-length encoded row for Pixel value (4 bits))",
+        title: "Non run-length encoded row for Pixel value (4 bits)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 6, y: 2 },
@@ -13235,7 +13298,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 32 },
         category: "Sequences common to image data",
-        title: "(Non run-length encoded picture data for Pixel value (4 bits))",
+        title: "Non run-length encoded picture data for Pixel value (4 bits)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 2 },
@@ -13248,7 +13311,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 41 },
         category: "Sequences common to image data",
-        title: "(Run-length encoded row for Pixel value (4 bits))",
+        title: "Run-length encoded row for Pixel value (4 bits)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 6, y: 2 },
@@ -13269,7 +13332,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 42 },
         category: "Sequences common to image data",
-        title: "(Run-length encoded picture data for Pixel value (4 bits))",
+        title: "Run-length encoded picture data for Pixel value (4 bits)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 2 },
@@ -13282,7 +13345,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 13, y: 43 },
         category: "Sequences common to image data",
-        title: "(Run-length encoded picture data for pixel value (4 bits), regular grid)",
+        title: "Run-length encoded picture data for pixel value (4 bits), regular grid",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 6, y: 2 },
@@ -13307,7 +13370,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 1 },
         category: "Oceanographic report sequences",
-        title: "(Typically reported underwater sounding without optional fields)",
+        title: "Typically reported underwater sounding without optional fields",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -13320,7 +13383,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 2 },
         category: "Oceanographic report sequences",
-        title: "(Typically reported underwater sounding without optional fields)",
+        title: "Typically reported underwater sounding without optional fields",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 11 },
@@ -13333,7 +13396,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 3 },
         category: "Oceanographic report sequences",
-        title: "(Temperature and salinity profile observed by profile floats)",
+        title: "Temperature and salinity profile observed by profile floats",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 87 },
@@ -13366,7 +13429,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 4 },
         category: "Oceanographic report sequences",
-        title: "(XBT temperature profile data sequence)",
+        title: "XBT temperature profile data sequence",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 79 },
@@ -13438,7 +13501,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 5 },
         category: "Oceanographic report sequences",
-        title: "(Water temperature profile (temperature profile observed by XBT or buoy)",
+        title: "Water temperature profile (temperature profile observed by XBT or buoy",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 6, y: 0 },
@@ -13454,7 +13517,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 6 },
         category: "Oceanographic report sequences",
-        title: "(XCTD temperature and salinity profile data)",
+        title: "XCTD temperature and salinity profile data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 79 },
@@ -13536,7 +13599,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 7 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for representation of data derived from a ship-based lowered instrument measuring subsurface sea/water temperature, salinity and current profiles)",
+        title: "Sequence for representation of data derived from a ship-based lowered instrument measuring subsurface sea/water temperature, salinity and current profiles",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 3 },
@@ -13601,7 +13664,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 8 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for the representation of data from moored buoys)",
+        title: "Sequence for the representation of data from moored buoys",
         sub_title: "Buoy identification and location",
         elements: &[
             Descriptor { f: 3, x: 1, y: 126 },
@@ -13634,7 +13697,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 9 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for the representation of data from drifting buoys)",
+        title: "Sequence for the representation of data from drifting buoys",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 87 },
@@ -13697,7 +13760,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 10 },
         category: "Oceanographic report sequences",
-        title: "(First five Fourier components of the wave spectrum)",
+        title: "First five Fourier components of the wave spectrum",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 12, y: 0 },
@@ -13719,7 +13782,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 11 },
         category: "Oceanographic report sequences",
-        title: "(Met-ocean observations from autonomous surface vehicles)",
+        title: "Met-ocean observations from autonomous surface vehicles",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -13799,7 +13862,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 12 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for reporting observations from a single glider trajectory profile)",
+        title: "Sequence for reporting observations from a single glider trajectory profile",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -13869,7 +13932,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 13 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for reporting trajectory profile data from marine animal tags)",
+        title: "Sequence for reporting trajectory profile data from marine animal tags",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -13909,7 +13972,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 15, y: 23 },
         category: "Oceanographic report sequences",
-        title: "(Sequence for reporting trajectory profile data from marine animal tags)",
+        title: "Sequence for reporting trajectory profile data from marine animal tags",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 150 },
@@ -13969,7 +14032,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 2 },
         category: "Synoptic feature sequences",
-        title: "(Header)",
+        title: "Header",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -13992,7 +14055,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 3 },
         category: "Synoptic feature sequences",
-        title: "(Jet stream)",
+        title: "Jet stream",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 10, y: 0 },
@@ -14012,7 +14075,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 4 },
         category: "Synoptic feature sequences",
-        title: "(Turbulence)",
+        title: "Turbulence",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 11, y: 0 },
@@ -14033,7 +14096,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 5 },
         category: "Synoptic feature sequences",
-        title: "(Storm)",
+        title: "Storm",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 8, y: 0 },
@@ -14051,7 +14114,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 6 },
         category: "Synoptic feature sequences",
-        title: "(Cloud)",
+        title: "Cloud",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 12, y: 0 },
@@ -14073,7 +14136,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 7 },
         category: "Synoptic feature sequences",
-        title: "(Front)",
+        title: "Front",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 10, y: 0 },
@@ -14093,7 +14156,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 8 },
         category: "Synoptic feature sequences",
-        title: "(Tropopause)",
+        title: "Tropopause",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 11, y: 0 },
@@ -14114,7 +14177,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 9 },
         category: "Synoptic feature sequences",
-        title: "(Airframe icing area)",
+        title: "Airframe icing area",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 11, y: 0 },
@@ -14135,7 +14198,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 10 },
         category: "Synoptic feature sequences",
-        title: "(Name of feature)",
+        title: "Name of feature",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 7, y: 0 },
@@ -14152,7 +14215,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 11 },
         category: "Synoptic feature sequences",
-        title: "(Volcano erupting)",
+        title: "Volcano erupting",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 17, y: 0 },
@@ -14179,7 +14242,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 20 },
         category: "Synoptic feature sequences",
-        title: "(Tropical storm identification)",
+        title: "Tropical storm identification",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -14192,7 +14255,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 21 },
         category: "Synoptic feature sequences",
-        title: "(Analysis data)",
+        title: "Analysis data",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 23 },
@@ -14223,7 +14286,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 22 },
         category: "Synoptic feature sequences",
-        title: "(Forecast data)",
+        title: "Forecast data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 32 },
@@ -14255,7 +14318,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 26 },
         category: "Synoptic feature sequences",
-        title: "(Tropical storm analysis information)",
+        title: "Tropical storm analysis information",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 16, y: 20 },
@@ -14265,7 +14328,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 27 },
         category: "Synoptic feature sequences",
-        title: "(Tropical storm forecast information)",
+        title: "Tropical storm forecast information",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 16, y: 20 },
@@ -14275,7 +14338,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 30 },
         category: "Synoptic feature sequences",
-        title: "(SIGMET header)",
+        title: "SIGMET header",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 14 },
@@ -14293,7 +14356,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 31 },
         category: "Synoptic feature sequences",
-        title: "(SIGMET, Observed or forecast location and motion)",
+        title: "SIGMET, Observed or forecast location and motion",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -14309,7 +14372,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 32 },
         category: "Synoptic feature sequences",
-        title: "(SIGMET, Forecast position)",
+        title: "SIGMET, Forecast position",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -14322,7 +14385,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 33 },
         category: "Synoptic feature sequences",
-        title: "(SIGMET, Outlook)",
+        title: "SIGMET, Outlook",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 21 },
@@ -14337,7 +14400,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 34 },
         category: "Synoptic feature sequences",
-        title: "(Volcanic Ash SIGMET)",
+        title: "Volcanic Ash SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14362,7 +14425,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 35 },
         category: "Synoptic feature sequences",
-        title: "(Thunderstorm SIGMET)",
+        title: "Thunderstorm SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14379,7 +14442,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 36 },
         category: "Synoptic feature sequences",
-        title: "(Tropical cyclone SIGMET)",
+        title: "Tropical cyclone SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14400,7 +14463,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 37 },
         category: "Synoptic feature sequences",
-        title: "(Turbulence SIGMET)",
+        title: "Turbulence SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14415,7 +14478,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 38 },
         category: "Synoptic feature sequences",
-        title: "(Icing SIGMET)",
+        title: "Icing SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14431,7 +14494,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 39 },
         category: "Synoptic feature sequences",
-        title: "(Mountain wave, duststorm or sandstorm SIGMET)",
+        title: "Mountain wave, duststorm or sandstorm SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14446,7 +14509,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 40 },
         category: "Synoptic feature sequences",
-        title: "(Cancellation of SIGMET)",
+        title: "Cancellation of SIGMET",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 16, y: 30 },
@@ -14460,7 +14523,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 50 },
         category: "Synoptic feature sequences",
-        title: "(RADOB template - Part A: Information on tropical cyclone)",
+        title: "RADOB template - Part A: Information on tropical cyclone",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 1 },
@@ -14508,7 +14571,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 52 },
         category: "Synoptic feature sequences",
-        title: "(SAREP template - Part A: Information on tropical cyclone)",
+        title: "SAREP template - Part A: Information on tropical cyclone",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 5 },
@@ -14609,7 +14672,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 60 },
         category: "Synoptic feature sequences",
-        title: "(Definition of squall line (by 3 points: Centre, North, South) and forecasted trajectory and evolution)",
+        title: "Definition of squall line (by 3 points: Centre, North, South) and forecasted trajectory and evolution",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -14631,7 +14694,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 61 },
         category: "Synoptic feature sequences",
-        title: "(Definition of squall line (by centre and several points: North points and South points) and forecasted trajectory and evolution)",
+        title: "Definition of squall line (by centre and several points: North points and South points) and forecasted trajectory and evolution",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 11 },
@@ -14657,7 +14720,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 71 },
         category: "Synoptic feature sequences",
-        title: "(Graphical AIRMET Sierra)",
+        title: "Graphical AIRMET Sierra",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 14 },
@@ -14672,7 +14735,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 72 },
         category: "Synoptic feature sequences",
-        title: "(Graphical AIRMET Tango)",
+        title: "Graphical AIRMET Tango",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 14 },
@@ -14690,7 +14753,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 73 },
         category: "Synoptic feature sequences",
-        title: "(Graphical AIRMET Zulu)",
+        title: "Graphical AIRMET Zulu",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 14 },
@@ -14705,7 +14768,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 74 },
         category: "Synoptic feature sequences",
-        title: "(GFA identifier and observed/forecast location)",
+        title: "GFA identifier and observed/forecast location",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 39 },
@@ -14718,7 +14781,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 75 },
         category: "Synoptic feature sequences",
-        title: "(GFA IFR ceiling and visibility)",
+        title: "GFA IFR ceiling and visibility",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14738,7 +14801,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 76 },
         category: "Synoptic feature sequences",
-        title: "(GFA mountain obscuration)",
+        title: "GFA mountain obscuration",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14754,7 +14817,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 77 },
         category: "Synoptic feature sequences",
-        title: "(GFA turbulence)",
+        title: "GFA turbulence",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14768,7 +14831,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 78 },
         category: "Synoptic feature sequences",
-        title: "(GFA strong surface wind)",
+        title: "GFA strong surface wind",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14783,7 +14846,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 79 },
         category: "Synoptic feature sequences",
-        title: "(GFA low-level wind shear)",
+        title: "GFA low-level wind shear",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14798,7 +14861,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 80 },
         category: "Synoptic feature sequences",
-        title: "(GFA icing)",
+        title: "GFA icing",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14812,7 +14875,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 81 },
         category: "Synoptic feature sequences",
-        title: "(GFA freezing level)",
+        title: "GFA freezing level",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 79 },
@@ -14825,7 +14888,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 82 },
         category: "Synoptic feature sequences",
-        title: "(Tropical cyclone track and wind radii)",
+        title: "Tropical cyclone track and wind radii",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -14877,7 +14940,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 16, y: 83 },
         category: "Synoptic feature sequences",
-        title: "(Tropical cyclone track, wind radii and vortex)",
+        title: "Tropical cyclone track, wind radii and vortex",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 33 },
@@ -14972,7 +15035,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 1 },
         category: "Radar report sequences",
-        title: "(Wind profiler - antenna characteristics)",
+        title: "Wind profiler - antenna characteristics",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 101 },
@@ -14986,7 +15049,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 3 },
         category: "Radar report sequences",
-        title: "(Wind profiler - moment data)",
+        title: "Wind profiler - moment data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 21, y: 51 },
@@ -14998,7 +15061,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 4 },
         category: "Radar report sequences",
-        title: "(Wind profiler - moment data sounding)",
+        title: "Wind profiler - moment data sounding",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 31 },
@@ -15011,7 +15074,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 5 },
         category: "Radar report sequences",
-        title: "(Transmitter-receiver characteristics)",
+        title: "Transmitter-receiver characteristics",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 4 },
@@ -15031,7 +15094,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 6 },
         category: "Radar report sequences",
-        title: "(Integration characteristics)",
+        title: "Integration characteristics",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 1 },
@@ -15043,7 +15106,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 7 },
         category: "Radar report sequences",
-        title: "(Corrections)",
+        title: "Corrections",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 9 },
@@ -15059,7 +15122,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 8 },
         category: "Radar report sequences",
-        title: "(Z to R conversion)",
+        title: "Z to R conversion",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 6 },
@@ -15070,7 +15133,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 9 },
         category: "Radar report sequences",
-        title: "(A to Z law)",
+        title: "A to Z law",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 18 },
@@ -15080,7 +15143,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 10 },
         category: "Radar report sequences",
-        title: "(Antenna characteristics)",
+        title: "Antenna characteristics",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 101 },
@@ -15101,7 +15164,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 11 },
         category: "Radar report sequences",
-        title: "(General characteristics)",
+        title: "General characteristics",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 30, y: 31 },
@@ -15112,7 +15175,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 12 },
         category: "Radar report sequences",
-        title: "(Antenna elevations)",
+        title: "Antenna elevations",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 1, y: 0 },
@@ -15123,7 +15186,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 21 },
         category: "Radar report sequences",
-        title: "(Basic information (system/site header) on wind profiler/RASS)",
+        title: "Basic information (system/site header) on wind profiler/RASS",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 2, y: 3 },
@@ -15146,7 +15209,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 22 },
         category: "Radar report sequences",
-        title: "(Wind profiler: processed-data winds)",
+        title: "Wind profiler: processed-data winds",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 7 },
@@ -15165,7 +15228,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 23 },
         category: "Radar report sequences",
-        title: "(Wind profiler: raw-data winds)",
+        title: "Wind profiler: raw-data winds",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 7 },
@@ -15182,7 +15245,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 24 },
         category: "Radar report sequences",
-        title: "(RASS-mode: processed-data RASS)",
+        title: "RASS-mode: processed-data RASS",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 7 },
@@ -15197,7 +15260,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 25 },
         category: "Radar report sequences",
-        title: "(RASS-mode: raw-data RASS)",
+        title: "RASS-mode: raw-data RASS",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 7 },
@@ -15222,7 +15285,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 26 },
         category: "Radar report sequences",
-        title: "(RASS data - fluxes)",
+        title: "RASS data - fluxes",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 7, y: 7 },
@@ -15240,7 +15303,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 27 },
         category: "Radar report sequences",
-        title: "(Radar specification, normalized radar cross-section, Kp variance coefficient)",
+        title: "Radar specification, normalized radar cross-section, Kp variance coefficient",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -15298,7 +15361,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 28 },
         category: "Radar report sequences",
-        title: "(Radar specification, SEAWINDS normalized radar cross-section, Kp variance coefficient)",
+        title: "Radar specification, SEAWINDS normalized radar cross-section, Kp variance coefficient",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -15356,7 +15419,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 30 },
         category: "Radar report sequences",
-        title: "(ASCAT sigma-0 information)",
+        title: "ASCAT sigma-0 information",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 85 },
@@ -15418,7 +15481,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 21, y: 31 },
         category: "Radar report sequences",
-        title: "(Satellite radar observations)",
+        title: "Satellite radar observations",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -15449,7 +15512,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 22, y: 1 },
         category: "Chemical and aerosol sequences",
-        title: "(Aerosol optical depth)",
+        title: "Aerosol optical depth",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 10, y: 22 },
@@ -15502,7 +15565,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 22, y: 28 },
         category: "Chemical and aerosol sequences",
-        title: "(METOP GOME-2)",
+        title: "METOP GOME-2",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -15546,7 +15609,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 1 },
         category: "Additional satellite report sequences",
-        title: "(IASI Level 1c data)",
+        title: "IASI Level 1c data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -15599,7 +15662,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 2 },
         category: "Additional satellite report sequences",
-        title: "(Band description)",
+        title: "Band description",
         sub_title: "",
         elements: &[
             Descriptor {
@@ -15622,7 +15685,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 3 },
         category: "Additional satellite report sequences",
-        title: "(IASI Level 1c 100 channels)",
+        title: "IASI Level 1c 100 channels",
         sub_title: "",
         elements: &[
             Descriptor { f: 1, x: 4, y: 100 },
@@ -15635,7 +15698,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 4 },
         category: "Additional satellite report sequences",
-        title: "(IASI Level 1c AVHRR single scene)",
+        title: "IASI Level 1c AVHRR single scene",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 5, y: 60 },
@@ -15660,7 +15723,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 5 },
         category: "Additional satellite report sequences",
-        title: "(JASON2 OGDR data)",
+        title: "JASON2 OGDR data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -15944,7 +16007,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 7 },
         category: "Additional satellite report sequences",
-        title: "(IASI Level 1c data (all channels))",
+        title: "IASI Level 1c data (all channels)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16017,7 +16080,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 8 },
         category: "Additional satellite report sequences",
-        title: "(IASI sequence combining PC scores, channel selection and enhanced data)",
+        title: "IASI sequence combining PC scores, channel selection and enhanced data",
         sub_title: "Satellite processing information",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16111,7 +16174,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 9 },
         category: "Additional satellite report sequences",
-        title: "(Normalized differential vegetation index (NDVI))",
+        title: "Normalized differential vegetation index (NDVI)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16142,7 +16205,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 10 },
         category: "Additional satellite report sequences",
-        title: "(JASON-2 OGDR data)",
+        title: "JASON-2 OGDR data",
         sub_title: "Satellite",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16434,7 +16497,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 11 },
         category: "Additional satellite report sequences",
-        title: "(SARAL Altika)",
+        title: "SARAL Altika",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16640,7 +16703,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 12 },
         category: "Additional satellite report sequences",
-        title: "(GPM Microwave Imager (GMI))",
+        title: "GPM Microwave Imager (GMI)",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16674,7 +16737,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 13 },
         category: "Additional satellite report sequences",
-        title: "(Atmospheric Laser Doppler Instrument (ALADIN) L2b data)",
+        title: "Atmospheric Laser Doppler Instrument (ALADIN) L2b data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16737,7 +16800,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 15 },
         category: "Additional satellite report sequences",
-        title: "(Global Precipitation Measurement (GPM) precipitation data)",
+        title: "Global Precipitation Measurement (GPM) precipitation data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -16777,7 +16840,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 16 },
         category: "Additional satellite report sequences",
-        title: "(Principal component scores, channel selection and enhanced data collected on board a geostationary platform)",
+        title: "Principal component scores, channel selection and enhanced data collected on board a geostationary platform",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 129 },
@@ -16800,7 +16863,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 17 },
         category: "Additional satellite report sequences",
-        title: "(Sentinel-3 (S3) level 2 water product)",
+        title: "Sentinel-3 (S3) level 2 water product",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -17356,7 +17419,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 18 },
         category: "Additional satellite report sequences",
-        title: "(Infrared Fourier spectrometer - 2 (IKFS-2) spectra)",
+        title: "Infrared Fourier spectrometer - 2 (IKFS-2) spectra",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 1, y: 129 },
@@ -17375,7 +17438,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 19 },
         category: "Additional satellite report sequences",
-        title: "(Altimeter product)",
+        title: "Altimeter product",
         sub_title: "",
         elements: &[
             Descriptor { f: 3, x: 40, y: 20 },
@@ -17387,7 +17450,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 20 },
         category: "Additional satellite report sequences",
-        title: "(Satellite general values)",
+        title: "Satellite general values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -17433,7 +17496,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 21 },
         category: "Additional satellite report sequences",
-        title: "(General radiometer values)",
+        title: "General radiometer values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 40, y: 12 },
@@ -17451,7 +17514,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 22 },
         category: "Additional satellite report sequences",
-        title: "(Altimeter model values)",
+        title: "Altimeter model values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 29 },
@@ -17522,7 +17585,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 23 },
         category: "Additional satellite report sequences",
-        title: "(Altimeter main values)",
+        title: "Altimeter main values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 25, y: 95 },
@@ -17537,7 +17600,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 24 },
         category: "Additional satellite report sequences",
-        title: "(1 Hz C and Ku band values)",
+        title: "1 Hz C and Ku band values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 22, y: 80 },
@@ -17690,7 +17753,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 25 },
         category: "Additional satellite report sequences",
-        title: "(20 Hz C and Ku band values)",
+        title: "20 Hz C and Ku band values",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 49 },
@@ -17825,7 +17888,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 26 },
         category: "Additional satellite report sequences",
-        title: "(Lidar observations from satellite)",
+        title: "Lidar observations from satellite",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -17870,7 +17933,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 27 },
         category: "Additional satellite report sequences",
-        title: "(Lightning observations from satellite)",
+        title: "Lightning observations from satellite",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 1, y: 7 },
@@ -17902,7 +17965,7 @@ pub static TABLE_D: [TableDEntry; 641] = [
     TableDEntry {
         xy: XY { x: 40, y: 28 },
         category: "Additional satellite report sequences",
-        title: "(Satellite sounding data)",
+        title: "Satellite sounding data",
         sub_title: "",
         elements: &[
             Descriptor { f: 0, x: 8, y: 70 },

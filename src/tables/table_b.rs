@@ -2,7 +2,7 @@
 
 use super::{TableBEntry, XY};
 
-pub static TABLE_B: [TableBEntry; 1837] = [
+pub static TABLE_B: [TableBEntry; 1844] = [
     TableBEntry {
         xy: XY { x: 0, y: 1 },
         class_name: "BUFR/CREX table entries",
@@ -2904,7 +2904,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 3, y: 33 },
         class_name: "Instrumentation",
-        element_name: "Channel band width",
+        element_name: "Channel bandwidth",
         scale: -6,
         reference_value: 0,
         unit: "Hz",
@@ -3964,6 +3964,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         bits: 12,
     },
     TableBEntry {
+        xy: XY { x: 7, y: 34 },
+        class_name: "Location (vertical)",
+        element_name: "Vertical distance of sensor",
+        scale: 2,
+        reference_value: -65000,
+        unit: "m",
+        bits: 17,
+    },
+    TableBEntry {
         xy: XY { x: 7, y: 35 },
         class_name: "Location (vertical)",
         element_name: "Maximum size of z-dimension",
@@ -4331,6 +4340,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         reference_value: 0,
         unit: "Code table",
         bits: 6,
+    },
+    TableBEntry {
+        xy: XY { x: 8, y: 27 },
+        class_name: "Significance qualifiers",
+        element_name: "Type of sea-surface height anomaly measurement",
+        scale: 0,
+        reference_value: 0,
+        unit: "Code table",
+        bits: 8,
     },
     TableBEntry {
         xy: XY { x: 8, y: 29 },
@@ -6601,6 +6619,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         bits: 16,
     },
     TableBEntry {
+        xy: XY { x: 12, y: 133 },
+        class_name: "Temperature",
+        element_name: "Ice temperature",
+        scale: 2,
+        reference_value: 0,
+        unit: "K",
+        bits: 16,
+    },
+    TableBEntry {
         xy: XY { x: 12, y: 151 },
         class_name: "Temperature",
         element_name: "Standard deviation of daily mean temperature",
@@ -7483,6 +7510,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         bits: 14,
     },
     TableBEntry {
+        xy: XY { x: 13, y: 119 },
+        class_name: "Hydrographic and hydrological elements",
+        element_name: "Snow depth",
+        scale: 3,
+        reference_value: -10000,
+        unit: "m",
+        bits: 15,
+    },
+    TableBEntry {
         xy: XY { x: 13, y: 155 },
         class_name: "Hydrographic and hydrological elements",
         element_name: "Intensity of precipitation (high accuracy)",
@@ -7499,6 +7535,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         reference_value: -350,
         unit: "kg m-2",
         bits: 10,
+    },
+    TableBEntry {
+        xy: XY { x: 13, y: 161 },
+        class_name: "Hydrographic and hydrological elements",
+        element_name: "Most unstable convective available potential energy (CAPE)",
+        scale: 0,
+        reference_value: 0,
+        unit: "J/kg",
+        bits: 14,
     },
     TableBEntry {
         xy: XY { x: 13, y: 162 },
@@ -7530,7 +7575,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 13, y: 165 },
         class_name: "Hydrographic and hydrological elements",
-        element_name: "CAPE (convective available potential energy)",
+        element_name: "Convective available potential energy (CAPE)",
         scale: 0,
         reference_value: 0,
         unit: "J/kg",
@@ -7566,7 +7611,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 13, y: 169 },
         class_name: "Hydrographic and hydrological elements",
-        element_name: "MDPI (microburst day potential index)",
+        element_name: "Microburst day potential index (MDPI)",
         scale: 1,
         reference_value: -100,
         unit: "K/K",
@@ -10129,6 +10174,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         bits: 10,
     },
     TableBEntry {
+        xy: XY { x: 21, y: 20 },
+        class_name: "Radar data",
+        element_name: "Dynamic atmospheric correction",
+        scale: 3,
+        reference_value: -65536,
+        unit: "Numeric",
+        bits: 17,
+    },
+    TableBEntry {
         xy: XY { x: 21, y: 21 },
         class_name: "Radar data",
         element_name: "Echo tops",
@@ -11517,7 +11571,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 22, y: 46 },
         class_name: "Oceanographic elements",
-        element_name: "Sea ice fraction",
+        element_name: "Sea-ice fraction",
         scale: 2,
         reference_value: 0,
         unit: "Numeric",
@@ -16161,7 +16215,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 40, y: 62 },
         class_name: "Satellite data",
-        element_name: "A-priori partial columns on each retrieved layer",
+        element_name: "A priori partial columns on each retrieved layer",
         scale: 10,
         reference_value: 0,
         unit: "mol cm-2",
@@ -16312,6 +16366,15 @@ pub static TABLE_B: [TableBEntry; 1837] = [
         bits: 5,
     },
     TableBEntry {
+        xy: XY { x: 40, y: 81 },
+        class_name: "Satellite data",
+        element_name: "OLCI Level 1 classification and quality",
+        scale: 0,
+        reference_value: 0,
+        unit: "Flag table",
+        bits: 31,
+    },
+    TableBEntry {
         xy: XY { x: 41, y: 1 },
         class_name: "Oceanographic/biogeochemical parameters",
         element_name: "pCO2",
@@ -16359,7 +16422,7 @@ pub static TABLE_B: [TableBEntry; 1837] = [
     TableBEntry {
         xy: XY { x: 41, y: 6 },
         class_name: "Oceanographic/biogeochemical parameters",
-        element_name: "Sea water pH",
+        element_name: "Seawater pH",
         scale: 4,
         reference_value: 70000,
         unit: "Numeric",

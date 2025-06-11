@@ -128,7 +128,9 @@ def make_table_d() -> None:
                 f.write("TableDEntry {\n")
                 f.write(f"xy: XY {{ x: {x1}, y: {y1} }},\n")
                 f.write(f'category: "{escape(row["CategoryOfSequences_en"])}",\n')  # type: ignore
-                f.write(f'title: "{escape(row["Title_en"])}",\n')  # type: ignore
+                f.write(
+                    f'title: "{escape(row["Title_en"]).removeprefix("(").removesuffix(")")}",\n'  # type: ignore
+                )
                 f.write(f'sub_title: "{escape(row["SubTitle_en"])}",\n')  # type: ignore
                 f.write("elements: &[\n")
             f.write(f"Descriptor {{ f: {f2}, x: {x2}, y: {y2} }},\n")
