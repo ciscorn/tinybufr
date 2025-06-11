@@ -6,7 +6,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 197 },
-        element_name: "JMA 作成種類",
+        element_name: "jma:作成種類",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -15,7 +15,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 200 },
-        element_name: "JMA 府県表示番号",
+        element_name: "jma:府県表示番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -24,7 +24,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 201 },
-        element_name: "JMA 地点表示番号",
+        element_name: "jma:地点表示番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -33,7 +33,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 202 },
-        element_name: "JMA 機関番号",
+        element_name: "jma:機関番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -42,7 +42,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 203 },
-        element_name: "JMA 潮位観測地点番号",
+        element_name: "jma:潮位観測地点番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -51,7 +51,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 210 },
-        element_name: "JMA 河川番号",
+        element_name: "jma:河川番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 80000000,
@@ -60,7 +60,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 240 },
-        element_name: "JMA 震央地名番号",
+        element_name: "jma:震央地名番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -69,7 +69,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 241 },
-        element_name: "JMA 震央地名の補助的表現のための地点番号",
+        element_name: "jma:震央地名の補助的表現のための地点番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -78,7 +78,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 1, y: 242 },
-        element_name: "JMA 電文の種類",
+        element_name: "jma:電文の種類",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -87,7 +87,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 2, y: 200 },
-        element_name: "JMA 潮位観測機器の種類",
+        element_name: "jma:潮位観測機器の種類",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -96,7 +96,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 5, y: 240 },
-        element_name: "JMA 1次メッシュ緯度番号",
+        element_name: "jma:1次メッシュ緯度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -105,7 +105,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 6, y: 240 },
-        element_name: "JMA 1次メッシュ経度番号",
+        element_name: "jma:1次メッシュ経度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -114,7 +114,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 5, y: 241 },
-        element_name: "JMA 2次メッシュ緯度番号",
+        element_name: "jma:2次メッシュ緯度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -123,7 +123,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 6, y: 241 },
-        element_name: "JMA 2次メッシュ経度番号",
+        element_name: "jma:2次メッシュ経度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -132,7 +132,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 5, y: 242 },
-        element_name: "JMA 3次メッシュ緯度番号",
+        element_name: "jma:3次メッシュ緯度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -141,7 +141,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 6, y: 242 },
-        element_name: "JMA 3次メッシュ経度番号",
+        element_name: "jma:3次メッシュ経度番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -150,7 +150,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 5, y: 243 },
-        element_name: "JMA 2分の1地域メッシュ番号",
+        element_name: "jma:2分の1地域メッシュ番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -159,7 +159,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 6, y: 243 },
-        element_name: "JMA 4分の1地域メッシュ番号",
+        element_name: "jma:4分の1地域メッシュ番号",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -168,7 +168,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 7, y: 200 },
-        element_name: "JMA 検潮所の固定点（球分体）の標高",
+        element_name: "jma:検潮所の固定点（球分体）の標高",
         unit: "m",
         scale: 3,
         reference_value: 0,
@@ -177,7 +177,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 7, y: 201 },
-        element_name: "JMA 検潮所の観測基準面の標高",
+        element_name: "jma:検潮所の観測基準面の標高",
         unit: "m",
         scale: 3,
         reference_value: -10000,
@@ -186,7 +186,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 193 },
-        element_name: "JMA 要素の修飾",
+        element_name: "jma:要素の修飾",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -195,7 +195,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 194 },
-        element_name: "JMA 現象の位置の修飾", // （震央は、「震央地名の補助的表現のための地点番号」から方位角の方向の距離で示す位置付近）"
+        element_name: "jma:現象の位置の修飾", // （震央は、「震央地名の補助的表現のための地点番号」から方位角の方向の距離で示す位置付近）"
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -204,7 +204,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 198 },
-        element_name: "JMA 震度階級の修飾",
+        element_name: "jma:震度階級の修飾",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -213,7 +213,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 220 },
-        element_name: "JMA 潮位データに対する修飾子",
+        element_name: "jma:潮位データに対する修飾子",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -222,7 +222,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 221 },
-        element_name: "JMA 潮位平滑化フィルタのカットオフ周期",
+        element_name: "jma:潮位平滑化フィルタのカットオフ周期",
         unit: "min",
         scale: 0,
         reference_value: 0,
@@ -231,7 +231,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 11, y: 202 },
-        element_name: "JMA 最大風速（１０分間平均）の風向",
+        element_name: "jma:最大風速（１０分間平均）の風向",
         unit: "degree true",
         scale: 0,
         reference_value: 0,
@@ -240,7 +240,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 13, y: 212 },
-        element_name: "JMA 流域雨量指数（高精度）",
+        element_name: "jma:流域雨量指数（高精度）",
         unit: "Numeric",
         scale: 1,
         reference_value: 0,
@@ -249,7 +249,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 20, y: 212 },
-        element_name: "JMA 自動観測による天気",
+        element_name: "jma:自動観測による天気",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -258,7 +258,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 22, y: 202 },
-        element_name: "JMA 検潮所の観測基準面に対する潮位",
+        element_name: "jma:検潮所の観測基準面に対する潮位",
         unit: "Numeric",
         scale: 3,
         reference_value: -3000,
@@ -267,7 +267,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 25, y: 192 },
-        element_name: "JMA ウィンドプロファイラデータ品質管理情報",
+        element_name: "jma:ウィンドプロファイラデータ品質管理情報",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -276,7 +276,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 25, y: 216 },
-        element_name: "JMA 潮位観測機器のサンプリング間隔",
+        element_name: "jma:潮位観測機器のサンプリング間隔",
         unit: "s",
         scale: 0,
         reference_value: 0,
@@ -285,7 +285,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 25, y: 217 },
-        element_name: "JMA 潮位観測機器による潮位データの平均時間",
+        element_name: "jma:潮位観測機器による潮位データの平均時間",
         unit: "s",
         scale: 0,
         reference_value: 0,
@@ -294,7 +294,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 25, y: 218 },
-        element_name: "JMA 検潮所の障害情報識別符",
+        element_name: "jma:検潮所の障害情報識別符",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -303,7 +303,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 25, y: 219 },
-        element_name: "JMA AQC",
+        element_name: "jma:AQC",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -312,7 +312,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 26, y: 193 },
-        element_name: "JMA 時",
+        element_name: "jma:時",
         unit: "h",
         scale: 0,
         reference_value: 0,
@@ -321,7 +321,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 26, y: 194 },
-        element_name: "JMA 分",
+        element_name: "jma:分",
         unit: "min",
         scale: 0,
         reference_value: 0,
@@ -339,7 +339,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 60, y: 1 },
-        element_name: "JMA マグニチュード",
+        element_name: "jma:マグニチュード",
         unit: "Numeric",
         scale: 1,
         reference_value: 0,
@@ -348,7 +348,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 60, y: 2 },
-        element_name: "JMA 計測震度",
+        element_name: "jma:計測震度",
         unit: "Numeric",
         scale: 1,
         reference_value: 0,
@@ -357,7 +357,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 60, y: 3 },
-        element_name: "JMA 階級震度（整数部）",
+        element_name: "jma:階級震度（整数部）",
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
