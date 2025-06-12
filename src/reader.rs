@@ -146,7 +146,7 @@ pub enum DataEvent {
     Eof,
 }
 
-#[derive(Clone)]
+#[derive(Clone, PartialEq, Eq)]
 pub enum Value {
     Missing,
     Decimal(i32, i8),
