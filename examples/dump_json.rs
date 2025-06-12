@@ -3,7 +3,7 @@ use std::io::{BufRead, BufReader, Read};
 
 use clap::Parser;
 use serde::Serialize;
-use tinybufr::tables::local::jma::{JMA_DATA_DESCRIPTORS, JMA_SEQUENCE_DESCRIPTORS};
+use tinybufr::tables::local::jma::install_jma_descriptors;
 use tinybufr::*;
 
 #[derive(clap::Parser)]
@@ -12,10 +12,6 @@ struct Args {
     /// Input BUFR file path
     #[arg(index = 1)]
     filename: String,
-
-    /// Skip first line of input
-    #[arg(short, long)]
-    skip_first_line: bool,
 
     /// Decode only the handler sections
     #[arg(short, long)]
@@ -50,19 +46,33 @@ fn main() -> Result<(), Error> {
 
     // Extend the default tables with JMA local descriptors
     let mut tables = Tables::default();
-    for desc in &JMA_DATA_DESCRIPTORS {
-        tables.table_b.insert(desc.xy, desc);
-    }
-    for seq in &JMA_SEQUENCE_DESCRIPTORS {
-        tables.table_d.insert(seq.xy, seq);
-    }
+    install_jma_descriptors(&mut tables);
 
-    let file = fs::File::open(args.filename)?;
-    let mut reader = BufReader::new(file);
-    if args.skip_first_line {
-        // Some files have a first line that is not part of the BUFR message
-        let mut buf = String::new();
-        reader.read_line(&mut buf)?;
+    let mut reader = BufReader::new(fs::File::open(args.filename)?);
+
+    // Check if the file starts with "BUFR", if not skip the first line (up to 1024 bytes)
+    {
+        let buf = reader.fill_buf()?;
+        if buf.len() >= 4 && &buf[..4] != b"BUFR" {
+            // File doesn't start with BUFR, skip to the next line
+            let max_skip = std::cmp::min(buf.len(), 1024);
+
+            let consumed =
+                if let Some(newline_pos) = buf[..max_skip].iter().position(|&b| b == b'\n') {
+                    // Found newline within limit, skip past it
+                    newline_pos + 1
+                } else if buf.len() < 1024 {
+                    // Reached EOF without finding newline
+                    return Err(Error::Fatal("No BUFR data found in file".to_string()));
+                } else {
+                    // No newline found within 1024 bytes
+                    return Err(Error::Fatal(
+                        "First line too long (>1024 bytes) and doesn't start with BUFR".to_string(),
+                    ));
+                };
+
+            reader.consume(consumed);
+        }
     }
 
     // Parse header sections
@@ -148,26 +158,20 @@ fn parse_sequence<R: Read>(
 
                 // Create the label with unit between name and counter
                 let label = match b.unit {
-                    "Numeric" => {
-                        if *count > 1 {
-                            format!("{} ({})", b.element_name, count)
-                        } else {
-                            b.element_name.to_string()
-                        }
-                    }
-                    _ => {
-                        if *count > 1 {
-                            format!("{} [{}] ({})", b.element_name, b.unit, count)
-                        } else {
-                            format!("{} [{}]", b.element_name, b.unit)
-                        }
-                    }
+                    "Numeric" => match *count {
+                        0 | 1 => b.element_name.to_string(),
+                        _ => format!("{} ({})", b.element_name, count),
+                    },
+                    _ => match *count {
+                        0 | 1 => format!("{} [{}]", b.element_name, b.unit),
+                        _ => format!("{} [{}] ({})", b.element_name, b.unit, count),
+                    },
                 };
                 let value = match value {
                     tinybufr::Value::Missing => Value::Missing(()),
                     tinybufr::Value::Decimal(v, s) => {
                         if s >= 0 {
-                            Value::Integer(v * 10f64.powi(s as i32) as i32)
+                            Value::Integer((v as f64 * 10f64.powi(s as i32)) as i32)
                         } else {
                             Value::Float(v as f64 * 10f64.powi(s as i32))
                         }
@@ -190,20 +194,14 @@ fn parse_sequence<R: Read>(
 
                 // Create the label with unit between name and counter
                 let label = match b.unit {
-                    "Numeric" => {
-                        if *count > 1 {
-                            format!("{} ({})", b.element_name, count)
-                        } else {
-                            b.element_name.to_string()
-                        }
-                    }
-                    _ => {
-                        if *count > 1 {
-                            format!("{} [{}] ({})", b.element_name, b.unit, count)
-                        } else {
-                            format!("{} [{}]", b.element_name, b.unit)
-                        }
-                    }
+                    "Numeric" => match *count {
+                        0 | 1 => b.element_name.to_string(),
+                        _ => format!("{} ({})", b.element_name, count),
+                    },
+                    _ => match *count {
+                        0 | 1 => format!("{} [{}]", b.element_name, b.unit),
+                        _ => format!("{} [{}] ({})", b.element_name, b.unit, count),
+                    },
                 };
                 let vals: Vec<Value> = values
                     .into_iter()
@@ -211,7 +209,7 @@ fn parse_sequence<R: Read>(
                         tinybufr::Value::Missing => Value::Missing(()),
                         tinybufr::Value::Decimal(v, s) => {
                             if s >= 0 {
-                                Value::Integer(v * 10f64.powi(s as i32) as i32)
+                                Value::Integer((v as f64 * 10f64.powi(s as i32)) as i32)
                             } else {
                                 Value::Float(v as f64 * 10f64.powi(s as i32))
                             }
@@ -237,10 +235,9 @@ fn parse_sequence<R: Read>(
                 *count += 1;
 
                 // Create the label with counter if duplicate
-                let label = if *count > 1 {
-                    format!("{} ({})", d.title, count)
-                } else {
-                    d.title.to_string()
+                let label = match *count {
+                    0 | 1 => d.title.to_string(),
+                    _ => format!("{} ({})", d.title, count),
                 };
 
                 let sequence = parse_sequence(data_reader, tables)?;

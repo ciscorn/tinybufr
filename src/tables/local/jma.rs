@@ -1,6 +1,16 @@
-use crate::Descriptor;
+use crate::{Descriptor, Tables};
 
 use super::super::{TableBEntry, TableDEntry, XY};
+
+/// Install JMA local descriptors into the provided Tables instance
+pub fn install_jma_descriptors(tables: &mut Tables) {
+    for desc in &JMA_DATA_DESCRIPTORS {
+        tables.table_b.insert(desc.xy, desc);
+    }
+    for seq in &JMA_SEQUENCE_DESCRIPTORS {
+        tables.table_d.insert(seq.xy, seq);
+    }
+}
 
 pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
