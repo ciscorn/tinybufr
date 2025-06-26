@@ -2,7 +2,7 @@ use std::fs;
 use std::io::{BufRead, BufReader};
 
 use clap::Parser;
-use tinybufr::tables::local::jma::{JMA_DATA_DESCRIPTORS, JMA_SEQUENCE_DESCRIPTORS};
+use tinybufr::tables::local::jma::install_jma_descriptors;
 use tinybufr::*;
 
 #[derive(clap::Parser)]
@@ -17,24 +17,38 @@ struct Args {
     skip_first_line: bool,
 }
 
-fn main() {
+fn main() -> Result<(), Error> {
     let args = Args::parse();
 
     // Extend the default tables with JMA local descriptors
     let mut tables = Tables::default();
-    for desc in &JMA_DATA_DESCRIPTORS {
-        tables.table_b.insert(desc.xy, desc);
-    }
-    for seq in &JMA_SEQUENCE_DESCRIPTORS {
-        tables.table_d.insert(seq.xy, seq);
-    }
+    install_jma_descriptors(&mut tables);
 
     let file = fs::File::open(args.filename).unwrap();
     let mut reader = BufReader::new(file);
-    if args.skip_first_line {
-        // Some files have a first line that is not part of the BUFR message
-        let mut buf = String::new();
-        reader.read_line(&mut buf).unwrap();
+
+    // Check if the file starts with "BUFR", if not skip the first line (up to 1024 bytes)
+    {
+        let buf = reader.fill_buf()?;
+        if buf.len() >= 4 && &buf[..4] != b"BUFR" {
+            // File doesn't start with BUFR, skip to the next line
+            let max_skip = buf.len().min(1024);
+            let consumed =
+                if let Some(newline_pos) = buf[..max_skip].iter().position(|&b| b == b'\n') {
+                    // Found newline within limit, skip past it
+                    newline_pos + 1
+                } else if buf.len() < 1024 {
+                    // Reached EOF without finding newline
+                    return Err(Error::Fatal("No BUFR data found in file".to_string()));
+                } else {
+                    // No newline found within 1024 bytes
+                    return Err(Error::Fatal(
+                        "First line too long (>1024 bytes) and doesn't start with BUFR".to_string(),
+                    ));
+                };
+
+            reader.consume(consumed);
+        }
     }
 
     // Parse header sections
@@ -50,14 +64,14 @@ fn main() {
         match data_reader.read_event() {
             Ok(DataEvent::Data { idx: _, xy, value }) => {
                 if let Some(b) = tables.table_b.get(&xy) {
-                    println!("Data: {} {:?} {}", b.element_name, value, b.unit);
+                    println!("Data {} = {:?} [{}]", b.element_name, value, b.unit);
                 } else {
                     println!("Data: {:?}", value);
                 };
             }
             Ok(DataEvent::CompressedData { idx: _, xy, values }) => {
                 if let Some(b) = tables.table_b.get(&xy) {
-                    println!("Data: {} {:?} {}", b.element_name, values, b.unit);
+                    println!("Data {} = {:?} {}", b.element_name, values, b.unit);
                 } else {
                     println!("Data: {:?}", values);
                 };
@@ -66,14 +80,12 @@ fn main() {
                 break;
             }
             Ok(_) => {}
-            Err(e) => {
-                eprintln!("Error: {:?}", e);
-                return;
-            }
+            Err(e) => return Err(e),
         }
     }
 
     if let Err(err) = ensure_end_section(header.indicator_section.edition_number, &mut reader) {
         eprintln!("Error: {:?}", err);
     }
+    Ok(())
 }

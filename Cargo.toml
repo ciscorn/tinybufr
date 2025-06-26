@@ -16,6 +16,7 @@ thiserror = "2.0.12"
 
 [dev-dependencies]
 arrow = "55.1.0"
+chrono = { version = "0.4.41", features = ["serde"] }
 clap = { version = "4.5.32", features = ["derive"] }
 indexmap = { version = "2.8.0", features = ["serde"] }
 parquet = "55.1.0"

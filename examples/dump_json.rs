@@ -55,8 +55,7 @@ fn main() -> Result<(), Error> {
         let buf = reader.fill_buf()?;
         if buf.len() >= 4 && &buf[..4] != b"BUFR" {
             // File doesn't start with BUFR, skip to the next line
-            let max_skip = std::cmp::min(buf.len(), 1024);
-
+            let max_skip = buf.len().min(1024);
             let consumed =
                 if let Some(newline_pos) = buf[..max_skip].iter().position(|&b| b == b'\n') {
                     // Found newline within limit, skip past it
