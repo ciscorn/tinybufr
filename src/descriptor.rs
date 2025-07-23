@@ -118,8 +118,7 @@ pub(crate) fn resolve_descriptors<'a>(
                             Descriptor { f: 0, x: 31, y: 3 } => 8, // Note: JMA-local?
                             desc => {
                                 return Err(Error::Fatal(format!(
-                                    "Unsupported delayed descriptor replication factor: {:#?}",
-                                    desc
+                                    "Unsupported delayed descriptor replication factor: {desc:#?}",
                                 )));
                             }
                         }

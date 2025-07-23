@@ -166,8 +166,8 @@ impl std::fmt::Debug for Value {
                     if s < 0 { -s } else { 0 } as usize
                 )
             }
-            Value::Integer(v) => write!(f, "{}", v),
-            Value::String(s) => write!(f, "\"{}\"", s),
+            Value::Integer(v) => write!(f, "{v}"),
+            Value::String(s) => write!(f, "\"{s}\""),
         }
     }
 }
@@ -311,8 +311,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                 let Ok(s) = String::from_utf8(self.reader.read_to_vec((bit_width / 8) as usize)?)
                 else {
                     return Err(Error::Fatal(format!(
-                        "Failed to parse character string with bit width {}",
-                        bit_width
+                        "Failed to parse character string with bit width {bit_width}",
                     )));
                 };
                 if self.data_spec.is_compressed {
@@ -327,7 +326,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                     })
                 }
             }
-            _ => Err(Error::Fatal(format!("Unsupported bit width {}", bit_width))),
+            _ => Err(Error::Fatal(format!("Unsupported bit width {bit_width}"))),
         }
     }
 
@@ -356,8 +355,7 @@ impl<'a, R: Read> DataReader<'a, R> {
             (6, _) => self.temporary_operator = Some(xy),
             _ => {
                 return Err(Error::NotSupported(format!(
-                    "Operator descriptor {:#?} not supported yet.",
-                    xy
+                    "Operator descriptor {xy:#?} not supported yet.",
                 )));
             }
         }
