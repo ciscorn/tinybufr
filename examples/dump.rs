@@ -2,7 +2,6 @@ use std::fs;
 use std::io::{BufRead, BufReader};
 
 use clap::Parser;
-use tinybufr::tables::local::jma::install_jma_descriptors;
 use tinybufr::*;
 
 #[derive(clap::Parser)]
@@ -20,9 +19,10 @@ struct Args {
 fn main() -> Result<(), Error> {
     let args = Args::parse();
 
-    // Extend the default tables with JMA local descriptors
+    #[allow(unused_mut)]
     let mut tables = Tables::default();
-    install_jma_descriptors(&mut tables);
+    #[cfg(feature = "jma")]
+    tinybufr::tables::local::jma::install_jma_descriptors(&mut tables);
 
     let file = fs::File::open(args.filename).unwrap();
     let mut reader = BufReader::new(file);
@@ -53,7 +53,7 @@ fn main() -> Result<(), Error> {
 
     // Parse header sections
     let header = HeaderSections::read(&mut reader).unwrap();
-    println!("{:#?}", header);
+    println!("{header:#?}");
 
     // Parse data section
     let data_spec =
@@ -66,14 +66,14 @@ fn main() -> Result<(), Error> {
                 if let Some(b) = tables.table_b.get(&xy) {
                     println!("Data {} = {:?} [{}]", b.element_name, value, b.unit);
                 } else {
-                    println!("Data: {:?}", value);
+                    println!("Data: {value:?}");
                 };
             }
             Ok(DataEvent::CompressedData { idx: _, xy, values }) => {
                 if let Some(b) = tables.table_b.get(&xy) {
                     println!("Data {} = {:?} {}", b.element_name, values, b.unit);
                 } else {
-                    println!("Data: {:?}", values);
+                    println!("Data: {values:?}");
                 };
             }
             Ok(DataEvent::Eof) => {
@@ -85,7 +85,7 @@ fn main() -> Result<(), Error> {
     }
 
     if let Err(err) = ensure_end_section(header.indicator_section.edition_number, &mut reader) {
-        eprintln!("Error: {:?}", err);
+        eprintln!("Error: {err:?}");
     }
     Ok(())
 }

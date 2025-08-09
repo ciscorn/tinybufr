@@ -3,7 +3,6 @@ use std::io::{BufRead, BufReader, Read};
 
 use clap::Parser;
 use serde::Serialize;
-use tinybufr::tables::local::jma::install_jma_descriptors;
 use tinybufr::*;
 
 #[derive(clap::Parser)]
@@ -44,9 +43,10 @@ struct JsonBody {
 fn main() -> Result<(), Error> {
     let args = Args::parse();
 
-    // Extend the default tables with JMA local descriptors
+    #[allow(unused_mut)]
     let mut tables = Tables::default();
-    install_jma_descriptors(&mut tables);
+    #[cfg(feature = "jma")]
+    tinybufr::tables::local::jma::install_jma_descriptors(&mut tables);
 
     let mut reader = BufReader::new(fs::File::open(args.filename)?);
 
@@ -81,7 +81,7 @@ fn main() -> Result<(), Error> {
         let Ok(json) = serde_json::to_string_pretty(&header) else {
             return Err(Error::Fatal("Failed to serialize to JSON".to_string()));
         };
-        println!("{}", json);
+        println!("{json}");
         return Ok(());
     }
 
@@ -125,7 +125,7 @@ fn main() -> Result<(), Error> {
     let Ok(json) = serde_json::to_string_pretty(&body) else {
         return Err(Error::Fatal("Failed to serialize to JSON".to_string()));
     };
-    println!("{}", json);
+    println!("{json}");
 
     Ok(())
 }
@@ -146,7 +146,7 @@ fn parse_sequence<R: Read>(
             DataEvent::SubsetEnd | DataEvent::SequenceEnd | DataEvent::ReplicationItemEnd => break,
             DataEvent::Data { value, xy, .. } => {
                 let Some(b) = tables.table_b.get(&xy) else {
-                    return Err(Error::Fatal(format!("Unknown data descriptor: {:#?}", xy)));
+                    return Err(Error::Fatal(format!("Unknown data descriptor: {xy:#?}")));
                 };
 
                 // Track element name occurrences
@@ -182,7 +182,7 @@ fn parse_sequence<R: Read>(
             }
             DataEvent::CompressedData { xy, values, .. } => {
                 let Some(b) = tables.table_b.get(&xy) else {
-                    return Err(Error::Fatal(format!("Unknown data descriptor: {:#?}", xy)));
+                    return Err(Error::Fatal(format!("Unknown data descriptor: {xy:#?}")));
                 };
 
                 // Track element name occurrences
@@ -222,8 +222,7 @@ fn parse_sequence<R: Read>(
             DataEvent::SequenceStart { xy, .. } => {
                 let Some(d) = tables.table_d.get(&xy) else {
                     return Err(Error::Fatal(format!(
-                        "Unknown sequence descriptor: {:#?}",
-                        xy
+                        "Unknown sequence descriptor: {xy:#?}"
                     )));
                 };
 
@@ -244,7 +243,7 @@ fn parse_sequence<R: Read>(
             }
             DataEvent::ReplicationStart { .. } => {
                 replication_count += 1;
-                let label = format!("replication:{}", replication_count);
+                let label = format!("replication:{replication_count}");
                 let replication = parse_replication(data_reader, tables)?;
                 subset.insert(label, Value::Replication(replication));
             }

@@ -1,6 +1,6 @@
 [package]
 name = "tinybufr"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 description = "A decoder for BUFR meteorological observation data format"
@@ -30,20 +30,7 @@ serde_json = { version = "1.0.140", features = ["float_roundtrip", "preserve_ord
 [features]
 default = ["serde"]
 serde = ["dep:serde"]
-arrow = ["dep:arrow", "dep:indexmap"]
 jma = []
-
-[[example]]
-name = "dump"
-required-features = ["jma"]
-
-[[example]]
-name = "dump_json"
-required-features = ["jma"]
-
-[[example]]
-name = "dump_parquet"
-required-features = ["jma", "arrow"]
 
 [[test]]
 name = "read_jma"

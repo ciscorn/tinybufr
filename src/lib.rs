@@ -3,9 +3,6 @@ mod reader;
 mod sections;
 pub mod tables;
 
-#[cfg(feature = "arrow")]
-pub mod arrow;
-
 pub use descriptor::*;
 pub use reader::*;
 pub use sections::*;

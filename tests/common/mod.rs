@@ -10,7 +10,7 @@ pub fn test_full_read(mut reader: impl Read, tables: &Tables) {
 
     // Parse data section
     let data_spec =
-        DataSpec::from_data_description(&header.data_description_section, &tables).unwrap();
+        DataSpec::from_data_description(&header.data_description_section, tables).unwrap();
     let mut data_reader = DataReader::new(&mut reader, &data_spec).unwrap();
 
     let mut subset_counter = 0;
@@ -61,7 +61,7 @@ pub fn test_full_read(mut reader: impl Read, tables: &Tables) {
             }
             Ok(_) => {}
             Err(e) => {
-                panic!("Error: {:?}", e);
+                panic!("Error: {e:?}");
             }
         }
     }
