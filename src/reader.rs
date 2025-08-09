@@ -13,16 +13,22 @@ pub struct DataReader<'a, R: Read> {
     data_spec: &'a DataSpec<'a>,
     current_subset_idx: u16,
     reader: BitReader<R, BigEndian>,
+    /// Stack for parsing nested data
     stack: smallvec::SmallVec<[StackEntry<'a>; 8]>,
     temporary_operator: Option<XY>,
-    scale_offset: i8,
+    /// Current offset set by the "Change scale" operator
     width_offset: i8,
+    /// Current offset set by the "Change data width" operator
+    scale_offset: i8,
 }
 
 #[derive(Debug)]
 pub struct DataSpec<'a> {
+    /// The number of subsets in the data section
     pub number_of_subsets: u16,
+    /// Indicates if the data is stored in "compressed" format (column oriented) or not
     pub is_compressed: bool,
+    /// The sequence of descriptors stored in the header
     pub root_descriptors: Vec<ResolvedDescriptor<'a>>,
 }
 
@@ -59,9 +65,9 @@ impl<'a, R: Read> DataReader<'a, R> {
 }
 
 struct StackEntry<'a> {
+    ty: StackEntryType,
     descriptors: &'a [ResolvedDescriptor<'a>],
     next: u16,
-    entry_type: StackEntryType,
 }
 
 enum StackEntryType {
@@ -72,20 +78,20 @@ enum StackEntryType {
 impl<'a> StackEntry<'a> {
     fn new_sequence(descriptors: &'a [ResolvedDescriptor<'a>]) -> Self {
         Self {
+            ty: StackEntryType::Sequence,
             descriptors,
             next: 0,
-            entry_type: StackEntryType::Sequence,
         }
     }
 
     fn new_replication(descriptors: &'a [ResolvedDescriptor<'a>], count: u16) -> Self {
         Self {
-            descriptors,
-            next: descriptors.len() as u16,
-            entry_type: StackEntryType::Replication {
+            ty: StackEntryType::Replication {
                 remaining: count,
                 in_item: false,
             },
+            descriptors,
+            next: descriptors.len() as u16,
         }
     }
 }
@@ -200,7 +206,7 @@ impl<'a, R: Read> DataReader<'a, R> {
 
     fn process_next_descriptor(&mut self) -> Result<DataEvent, Error> {
         let top = self.stack.last_mut().expect("Stack should not be empty");
-        if let StackEntryType::Replication { remaining, in_item } = &mut top.entry_type {
+        if let StackEntryType::Replication { remaining, in_item } = &mut top.ty {
             if top.next as usize >= top.descriptors.len() {
                 if *in_item {
                     *in_item = false;
@@ -319,7 +325,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                     });
                 }
                 let Ok(s) = String::from_utf8(vec) else {
-                    return Err(Error::Fatal(format!(
+                    return Err(Error::Invalid(format!(
                         "Failed to parse character string with bit width {bit_width}",
                     )));
                 };
@@ -335,7 +341,7 @@ impl<'a, R: Read> DataReader<'a, R> {
                     })
                 }
             }
-            _ => Err(Error::Fatal(format!("Unsupported bit width {bit_width}"))),
+            _ => Err(Error::Invalid(format!("Unsupported bit width {bit_width}"))),
         }
     }
 
@@ -359,11 +365,15 @@ impl<'a, R: Read> DataReader<'a, R> {
     // f = 2
     fn handle_operator_descriptor(&mut self, idx: u16, xy: XY) -> Result<DataEvent, Error> {
         match (xy.x, xy.y) {
+            // Change data width
             (1, 0) => self.width_offset = 0,
             (1, y) => self.width_offset = ((y as i16) - 128) as i8,
+            // Change scale
             (2, 0) => self.scale_offset = 0,
             (2, y) => self.scale_offset = ((y as i16) - 128) as i8,
+            // Signify data width for the immediately following local descriptor
             (6, _) => self.temporary_operator = Some(xy),
+            // Not supported
             _ => {
                 return Err(Error::NotSupported(format!(
                     "Operator descriptor {xy:#?} not supported yet.",

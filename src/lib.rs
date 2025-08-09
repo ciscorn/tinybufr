@@ -13,10 +13,14 @@ pub use tables::{TableBEntry, TableDEntry, Tables};
 
 #[derive(thiserror::Error, Debug)]
 pub enum Error {
-    #[error("IO error: {0}")]
+    #[error(transparent)]
     Io(#[from] std::io::Error),
-    #[error("Fatal error: {0}")]
-    Fatal(String),
+    #[error("Table error: {0}")]
+    Table(String),
+    #[error("Invalid data: {0}")]
+    Invalid(String),
     #[error("Not supported: {0}")]
     NotSupported(String),
+    #[error("Fatal error: {0}")]
+    Fatal(String),
 }

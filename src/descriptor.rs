@@ -3,17 +3,15 @@
 use std::fmt::Debug;
 use std::io::Read;
 
-use byteorder::{BigEndian, ReadBytesExt};
-use serde::Serialize;
-
 use crate::{
     Error,
     tables::{TableBEntry, TableDEntry, Tables},
 };
+use byteorder::{BigEndian, ReadBytesExt};
 
 /// Descriptor (FXY)
 #[derive(Hash, Copy, Clone, Eq, PartialEq)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct Descriptor {
     pub f: u8,
     pub x: u8,
@@ -46,6 +44,7 @@ impl Descriptor {
     }
 }
 
+/// X and Y parts of a descriptor
 #[derive(Hash, Debug, Clone, Copy, Eq, PartialEq)]
 pub struct XY {
     pub x: u8,
@@ -69,7 +68,7 @@ impl<'a> ResolvedDescriptor<'a> {
         Ok(match desc.f {
             0 => {
                 let Some(b) = tables.table_b.get(&desc.xy()) else {
-                    return Err(Error::Fatal(format!(
+                    return Err(Error::Table(format!(
                         "Table B entry not found for xy: {:?}",
                         desc.xy()
                     )));
@@ -80,7 +79,7 @@ impl<'a> ResolvedDescriptor<'a> {
             2 => ResolvedDescriptor::Operator(desc.xy()),
             3 => {
                 let Some(d) = tables.table_d.get(&desc.xy()) else {
-                    return Err(Error::Fatal(format!(
+                    return Err(Error::Table(format!(
                         "Table D entry not found for xy: {:?}",
                         desc.xy()
                     )));
@@ -89,7 +88,7 @@ impl<'a> ResolvedDescriptor<'a> {
                 ResolvedDescriptor::Sequence(d, resolved_elements)
             }
             _ => {
-                return Err(Error::Fatal(format!(
+                return Err(Error::Table(format!(
                     "Table B entry not found for xy: {:?}",
                     desc.xy()
                 )));
@@ -117,7 +116,7 @@ pub(crate) fn resolve_descriptors<'a>(
                             Descriptor { f: 0, x: 31, y: 2 } => 16,
                             Descriptor { f: 0, x: 31, y: 3 } => 8, // Note: JMA-local?
                             desc => {
-                                return Err(Error::Fatal(format!(
+                                return Err(Error::NotSupported(format!(
                                     "Unsupported delayed descriptor replication factor: {desc:#?}",
                                 )));
                             }
@@ -127,7 +126,9 @@ pub(crate) fn resolve_descriptors<'a>(
                 };
                 pos += 1;
                 if pos + x as usize > descriptors.len() {
-                    return Err(Error::Fatal("Replication range out of bounds".to_string()));
+                    return Err(Error::Invalid(
+                        "Replication range out of bounds".to_string(),
+                    ));
                 }
                 resolved.push(ResolvedDescriptor::Replication {
                     y,

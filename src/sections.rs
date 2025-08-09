@@ -1,14 +1,14 @@
-//! The header sections of a BUFR file
+//! The header sections of BUFR files
+
+use std::io::Read;
 
 use byteorder::{BigEndian, ReadBytesExt};
-use serde::Serialize;
-use std::io::Read;
 
 use crate::{Descriptor, Error, three_bytes_to_u32};
 
 /// The header sections of a BUFR file
 #[derive(Debug)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct HeaderSections {
     pub indicator_section: IndicatorSection,
     pub identification_section: IdentificationSection,
@@ -26,7 +26,7 @@ impl HeaderSections {
             3 => IdentificationSectionV3::read(&mut reader)?.into(),
             4 => IdentificationSection::read(&mut reader)?,
             _ => {
-                return Err(Error::Fatal(format!(
+                return Err(Error::Invalid(format!(
                     "Unsupported edition number {}",
                     indicator_section.edition_number
                 )));
@@ -53,7 +53,7 @@ impl HeaderSections {
 
 /// Indicator section (Section 0)
 #[derive(Debug)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IndicatorSection {
     pub total_length: u32,
     pub edition_number: u8,
@@ -64,7 +64,7 @@ impl IndicatorSection {
         let mut magic = [0u8; 4];
         reader.read_exact(&mut magic)?;
         if &magic != b"BUFR" {
-            return Err(Error::Fatal("Invalid magic number".to_string()));
+            return Err(Error::Invalid("Invalid magic number".to_string()));
         }
 
         let mut len_bytes = [0u8; 3];
@@ -82,7 +82,7 @@ impl IndicatorSection {
 
 /// Identification section (Section 1)
 #[derive(Debug)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IdentificationSection {
     pub section_length: u32,
     pub master_table_number: u8,
@@ -111,7 +111,7 @@ impl IdentificationSection {
         let section_length = three_bytes_to_u32(len_bytes);
 
         if section_length < 22 {
-            return Err(Error::Fatal(
+            return Err(Error::Invalid(
                 "Identification section (BUFR4) length must be >= 22".to_string(),
             ));
         }
@@ -186,7 +186,7 @@ impl IdentificationSectionV3 {
         let section_length = three_bytes_to_u32(len_bytes);
 
         if section_length < 17 {
-            return Err(Error::Fatal(
+            return Err(Error::Invalid(
                 "Identification section (BUFR3) length must be >= 17".to_string(),
             ));
         }
@@ -256,7 +256,7 @@ impl From<IdentificationSectionV3> for IdentificationSection {
 }
 
 #[derive(Debug, Default)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IdentificationSectionFlags {
     pub has_optional_section: bool,
 }
@@ -272,7 +272,7 @@ impl IdentificationSectionFlags {
 
 /// Optional section (Section 2)
 #[derive(Debug)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct OptionalSection {
     pub section_length: u32,
     pub optional: Vec<u8>,
@@ -288,7 +288,7 @@ impl OptionalSection {
         reader.read_u8()?;
 
         if section_length < 4 {
-            return Err(Error::Fatal(
+            return Err(Error::Invalid(
                 "Optional section length must be >= 4".to_string(),
             ));
         }
@@ -305,7 +305,7 @@ impl OptionalSection {
 
 /// Data description section (Section 3)
 #[derive(Debug)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct DataDescriptionSection {
     pub section_length: u32,
     pub number_of_subsets: u16,
@@ -324,7 +324,7 @@ impl DataDescriptionSection {
         reader.read_u8()?;
 
         if section_length < 7 {
-            return Err(Error::Fatal(
+            return Err(Error::Invalid(
                 "Data description section length must be >= 7".to_string(),
             ));
         }
@@ -354,7 +354,7 @@ impl DataDescriptionSection {
 }
 
 #[derive(Debug, Default)]
-#[cfg_attr(feature = "serde", derive(Serialize))]
+#[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct DataDescriptionSectionFlags {
     pub is_observed_data: bool,
     pub is_compressed: bool,
@@ -385,18 +385,18 @@ pub fn ensure_end_section<R: std::io::Read>(edition: u8, reader: &mut R) -> Resu
                 let mut buf: [u8; 3] = [0; 3];
                 reader.read_exact(&mut buf)?;
                 if &buf != b"777" {
-                    return Err(Error::Fatal("Invalid end section".to_string()));
+                    return Err(Error::Invalid("Invalid end section".to_string()));
                 }
             }
             _ => {
-                return Err(Error::Fatal("Invalid end section".to_string()));
+                return Err(Error::Invalid("Invalid end section".to_string()));
             }
         }
     }
     let mut buf: [u8; 4] = [0; 4];
     reader.read_exact(&mut buf)?;
     if &buf != b"7777" {
-        return Err(Error::Fatal("Invalid end section".to_string()));
+        return Err(Error::Invalid("Invalid end section".to_string()));
     }
     Ok(())
 }

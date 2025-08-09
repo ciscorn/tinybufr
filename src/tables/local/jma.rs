@@ -2,7 +2,7 @@ use crate::{Descriptor, Tables};
 
 use super::super::{TableBEntry, TableDEntry, XY};
 
-/// Install JMA local descriptors into the provided Tables instance
+/// Install JMA local descriptors into the provided tables instance
 pub fn install_jma_descriptors(tables: &mut Tables) {
     for desc in &JMA_DATA_DESCRIPTORS {
         tables.table_b.insert(desc.xy, desc);
@@ -205,7 +205,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
     TableBEntry {
         class_name: "jma",
         xy: XY { x: 8, y: 194 },
-        element_name: "jma:現象の位置の修飾", // （震央は、「震央地名の補助的表現のための地点番号」から方位角の方向の距離で示す位置付近）"
+        element_name: "jma:現象の位置の修飾", // （震央は、「震央地名の補助的表現のための地点番号」から方位角の方向の距離で示す位置付近）
         unit: "Numeric",
         scale: 0,
         reference_value: 0,
@@ -378,7 +378,7 @@ pub static JMA_DATA_DESCRIPTORS: [TableBEntry; 40] = [
 pub static JMA_SEQUENCE_DESCRIPTORS: [TableDEntry; 1] = [TableDEntry {
     xy: XY { x: 1, y: 200 },
     category: "jma",
-    title: "(JIS X 0410 地域メッシュコード)",
+    title: "JIS X 0410 地域メッシュコード",
     sub_title: "",
     elements: &[
         Descriptor { f: 0, x: 5, y: 240 },
