@@ -16,6 +16,7 @@ pub struct DataReader<'a, R: Read> {
     stack: smallvec::SmallVec<[StackEntry<'a>; 8]>,
     temporary_operator: Option<XY>,
     scale_offset: i8,
+    width_offset: i8,
 }
 
 #[derive(Debug)]
@@ -52,6 +53,7 @@ impl<'a, R: Read> DataReader<'a, R> {
             stack: smallvec::SmallVec::new(),
             temporary_operator: None,
             scale_offset: 0,
+            width_offset: 0,
         })
     }
 }
@@ -246,7 +248,7 @@ impl<'a, R: Read> DataReader<'a, R> {
     // f = 0
     fn handle_data_descriptor(&mut self, idx: u16, b: &TableBEntry) -> Result<DataEvent, Error> {
         let (bit_width, ref_value, scale) = (
-            b.bits as u32,
+            (b.bits as i32 + self.width_offset as i32) as u32,
             b.reference_value,
             (b.scale as i16 + self.scale_offset as i16) as i8,
         );
@@ -350,6 +352,8 @@ impl<'a, R: Read> DataReader<'a, R> {
     // f = 2
     fn handle_operator_descriptor(&mut self, idx: u16, xy: XY) -> Result<DataEvent, Error> {
         match (xy.x, xy.y) {
+            (1, 0) => self.width_offset = 0,
+            (1, y) => self.width_offset = ((y as i16) - 128) as i8,
             (2, 0) => self.scale_offset = 0,
             (2, y) => self.scale_offset = ((y as i16) - 128) as i8,
             (6, _) => self.temporary_operator = Some(xy),
