@@ -4,6 +4,8 @@ use std::io::{BufRead, BufReader};
 use tinybufr::tables::local::jma::{JMA_DATA_DESCRIPTORS, JMA_SEQUENCE_DESCRIPTORS};
 use tinybufr::*;
 
+mod common;
+
 #[test]
 fn test_amedas() {
     read_example(
@@ -75,67 +77,5 @@ fn read_example(filename: &str, skip_first_line: bool) {
         reader.read_line(&mut buf).unwrap();
     }
 
-    // Parse header sections
-    let header = HeaderSections::read(&mut reader).unwrap();
-    println!("{}", serde_json::to_string_pretty(&header).unwrap());
-
-    // Parse data section
-    let data_spec =
-        DataSpec::from_data_description(&header.data_description_section, &tables).unwrap();
-    let mut data_reader = DataReader::new(&mut reader, &data_spec).unwrap();
-
-    let mut subset_counter = 0;
-    let mut sequence_counter = 0;
-    let mut replication_counter = 0;
-    let mut replication_item_counter = 0;
-
-    loop {
-        match data_reader.read_event() {
-            Ok(DataEvent::SubsetStart { .. }) => {
-                subset_counter += 1;
-            }
-            Ok(DataEvent::SubsetEnd) => {
-                subset_counter -= 1;
-                assert_eq!(sequence_counter, 0);
-                assert_eq!(replication_item_counter, 0);
-            }
-            Ok(DataEvent::SequenceStart { .. }) => {
-                sequence_counter += 1;
-            }
-            Ok(DataEvent::SequenceEnd) => {
-                sequence_counter -= 1;
-                assert_eq!(replication_counter, 0);
-            }
-            Ok(DataEvent::ReplicationStart { .. }) => {
-                println!("Replication start");
-                replication_counter += 1;
-            }
-            Ok(DataEvent::ReplicationItemStart) => {
-                println!("Replication item start");
-                replication_item_counter += 1;
-            }
-            Ok(DataEvent::ReplicationItemEnd) => {
-                println!("Replication item end");
-                replication_item_counter -= 1;
-            }
-            Ok(DataEvent::ReplicationEnd) => {
-                println!("Replication end");
-                replication_counter -= 1;
-            }
-            Ok(DataEvent::Data { .. }) => {
-                println!("Data");
-            }
-            Ok(DataEvent::CompressedData { .. }) => {}
-            Ok(DataEvent::Eof) => {
-                assert_eq!(subset_counter, 0);
-                break;
-            }
-            Ok(_) => {}
-            Err(e) => {
-                panic!("Error: {:?}", e);
-            }
-        }
-    }
-
-    ensure_end_section(header.indicator_section.edition_number, &mut reader).unwrap();
+    common::test_full_read(reader, &tables);
 }
