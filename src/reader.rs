@@ -310,8 +310,15 @@ impl<'a, R: Read> DataReader<'a, R> {
                 }
             }
             _ if bit_width % 8 == 0 => {
-                let Ok(s) = String::from_utf8(self.reader.read_to_vec((bit_width / 8) as usize)?)
-                else {
+                let vec = self.reader.read_to_vec((bit_width / 8) as usize)?;
+                if vec.iter().all(|it| *it == 0xff) {
+                    return Ok(DataEvent::Data {
+                        idx,
+                        xy: b.xy,
+                        value: Value::Missing,
+                    });
+                }
+                let Ok(s) = String::from_utf8(vec) else {
                     return Err(Error::Fatal(format!(
                         "Failed to parse character string with bit width {bit_width}",
                     )));
