@@ -62,6 +62,11 @@ impl<'a, R: Read> DataReader<'a, R> {
             width_offset: 0,
         })
     }
+
+    /// Unwrap the underlying reader passed in [new][Self::new].
+    pub fn into_reader(self) -> R {
+        self.reader.into_reader()
+    }
 }
 
 struct StackEntry<'a> {
