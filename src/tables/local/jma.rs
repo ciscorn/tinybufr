@@ -1,8 +1,10 @@
+//! JMA (Japan Meteorological Agency)'s local descriptors for BUFR
+
 use crate::{Descriptor, Tables};
 
 use super::super::{TableBEntry, TableDEntry, XY};
 
-/// Install JMA local descriptors into the provided tables instance
+/// Install JMA local descriptors into the provided tables instance.
 pub fn install_jma_descriptors(tables: &mut Tables) {
     for desc in &JMA_DATA_DESCRIPTORS {
         tables.table_b.insert(desc.xy, desc);

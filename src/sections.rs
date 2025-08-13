@@ -4,9 +4,9 @@ use std::io::Read;
 
 use byteorder::{BigEndian, ReadBytesExt};
 
-use crate::{Descriptor, Error, three_bytes_to_u32};
+use crate::{Descriptor, Error, reader::three_bytes_to_u32};
 
-/// The header sections of a BUFR file
+/// The header sections of a BUFR file.
 #[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct HeaderSections {
@@ -51,7 +51,7 @@ impl HeaderSections {
     }
 }
 
-/// Indicator section (Section 0)
+/// Indicator section (Section 0).
 #[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IndicatorSection {
@@ -80,7 +80,7 @@ impl IndicatorSection {
     }
 }
 
-/// Identification section (Section 1)
+/// Identification section (Section 1) for BUFR edition 4.
 #[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IdentificationSection {
@@ -159,6 +159,7 @@ impl IdentificationSection {
     }
 }
 
+/// Identification section for BUFR edition 3.
 #[derive(Debug)]
 pub struct IdentificationSectionV3 {
     pub section_length: u32,
@@ -255,6 +256,7 @@ impl From<IdentificationSectionV3> for IdentificationSection {
     }
 }
 
+/// Flags in the identification section.
 #[derive(Debug, Default)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct IdentificationSectionFlags {
@@ -270,7 +272,7 @@ impl IdentificationSectionFlags {
     }
 }
 
-/// Optional section (Section 2)
+/// Optional section (Section 2).
 #[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct OptionalSection {
@@ -303,7 +305,7 @@ impl OptionalSection {
     }
 }
 
-/// Data description section (Section 3)
+/// Data description section (Section 3).
 #[derive(Debug)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct DataDescriptionSection {
@@ -353,6 +355,7 @@ impl DataDescriptionSection {
     }
 }
 
+/// Flags in the data description section.
 #[derive(Debug, Default)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct DataDescriptionSectionFlags {
@@ -370,11 +373,30 @@ impl DataDescriptionSectionFlags {
     }
 }
 
-/// End section (Section 5)
+/// The header of the data section (Section 4).
+#[derive(Debug)]
+pub struct DataSectionHeader {
+    pub section_length: u32,
+}
+
+impl DataSectionHeader {
+    pub fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
+        let mut len_bytes = [0u8; 3];
+        reader.read_exact(&mut len_bytes)?;
+        let section_length = three_bytes_to_u32(len_bytes);
+
+        // Skip reserved byte
+        reader.read_u8()?;
+
+        Ok(Self { section_length })
+    }
+}
+
+/// End section (Section 5).
 #[derive(Debug)]
 pub struct EndSection {}
 
-/// Check if the end section appears in the stream
+/// Check if the end section appears in the stream.
 pub fn ensure_end_section<R: std::io::Read>(edition: u8, reader: &mut R) -> Result<(), Error> {
     if edition == 3 {
         let mut buf: [u8; 1] = [0; 1];

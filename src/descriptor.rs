@@ -3,13 +3,14 @@
 use std::fmt::Debug;
 use std::io::Read;
 
+use byteorder::{BigEndian, ReadBytesExt};
+
 use crate::{
     Error,
     tables::{TableBEntry, TableDEntry, Tables},
 };
-use byteorder::{BigEndian, ReadBytesExt};
 
-/// Descriptor (FXY)
+/// Descriptor (FXY).
 #[derive(Hash, Copy, Clone, Eq, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize))]
 pub struct Descriptor {
@@ -44,13 +45,14 @@ impl Descriptor {
     }
 }
 
-/// X and Y parts of a descriptor
+/// X and Y parts of a descriptor.
 #[derive(Hash, Debug, Clone, Copy, Eq, PartialEq)]
 pub struct XY {
     pub x: u8,
     pub y: u8,
 }
 
+/// A descriptor that has been resolved with table lookups.
 #[derive(Debug)]
 pub enum ResolvedDescriptor<'a> {
     Data(&'a TableBEntry),

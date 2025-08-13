@@ -3,15 +3,17 @@
 use std::io::Read;
 
 use bitstream_io::{BigEndian, BitRead, BitReader};
-use byteorder::ReadBytesExt;
 
-use crate::sections::DataDescriptionSection;
-use crate::tables::{TableBEntry, TableDEntry, Tables};
-use crate::{Error, ResolvedDescriptor, XY, resolve_descriptors};
+use crate::{
+    Error, ResolvedDescriptor, Value, XY, resolve_descriptors,
+    sections::{DataDescriptionSection, DataSectionHeader},
+    tables::{TableBEntry, TableDEntry, Tables},
+};
 
+/// A reader for parsing BUFR data sections.
 pub struct DataReader<'a, R: Read> {
     data_spec: &'a DataSpec<'a>,
-    current_subset_idx: u16,
+    current_subset_index: u16,
     reader: BitReader<R, BigEndian>,
     /// Stack for parsing nested data
     stack: smallvec::SmallVec<[StackEntry<'a>; 8]>,
@@ -22,6 +24,7 @@ pub struct DataReader<'a, R: Read> {
     scale_offset: i8,
 }
 
+/// Data specification for reading BUFR data section.
 #[derive(Debug)]
 pub struct DataSpec<'a> {
     /// The number of subsets in the data section
@@ -46,15 +49,11 @@ impl<'a> DataSpec<'a> {
 }
 
 impl<'a, R: Read> DataReader<'a, R> {
-    pub fn new(
-        mut reader: R,
-        spec: impl Into<&'a DataSpec<'a>>,
-    ) -> Result<DataReader<'a, R>, Error> {
-        let spec = spec.into();
+    pub fn new(mut reader: R, spec: &'a DataSpec<'a>) -> Result<DataReader<'a, R>, Error> {
         let _data_section_header = DataSectionHeader::read(&mut reader)?;
         Ok(DataReader {
             data_spec: spec,
-            current_subset_idx: 0,
+            current_subset_index: 0,
             reader: BitReader::endian(reader, BigEndian),
             stack: smallvec::SmallVec::new(),
             temporary_operator: None,
@@ -63,8 +62,8 @@ impl<'a, R: Read> DataReader<'a, R> {
         })
     }
 
-    /// Unwrap the underlying reader passed in [new][Self::new].
-    pub fn into_reader(self) -> R {
+    /// Unwraps this `DataReader`, returning the underlying reader.
+    pub fn into_inner(self) -> R {
         self.reader.into_reader()
     }
 }
@@ -105,25 +104,7 @@ pub(crate) fn three_bytes_to_u32(bytes: [u8; 3]) -> u32 {
     (bytes[0] as u32) << 16 | (bytes[1] as u32) << 8 | (bytes[2] as u32)
 }
 
-/// The header of the data section (Section 4)
-#[derive(Debug)]
-pub struct DataSectionHeader {
-    pub section_length: u32,
-}
-
-impl DataSectionHeader {
-    fn read<R: Read>(reader: &mut R) -> Result<Self, Error> {
-        let mut len_bytes = [0u8; 3];
-        reader.read_exact(&mut len_bytes)?;
-        let section_length = three_bytes_to_u32(len_bytes);
-
-        // Skip reserved byte
-        reader.read_u8()?;
-
-        Ok(Self { section_length })
-    }
-}
-
+/// Event emitted by [`DataReader`].
 #[derive(Debug)]
 pub enum DataEvent {
     SubsetStart(u16),
@@ -159,47 +140,22 @@ pub enum DataEvent {
     Eof,
 }
 
-#[derive(Clone, PartialEq, Eq)]
-pub enum Value {
-    Missing,
-    Decimal(i32, i8),
-    Integer(i32),
-    String(String),
-}
-
-impl std::fmt::Debug for Value {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            Value::Missing => write!(f, "Missing"),
-            &Value::Decimal(v, s) => {
-                write!(
-                    f,
-                    "{:.1$}",
-                    v as f64 * 10f64.powi(s as i32),
-                    if s < 0 { -s } else { 0 } as usize
-                )
-            }
-            Value::Integer(v) => write!(f, "{v}"),
-            Value::String(s) => write!(f, "\"{s}\""),
-        }
-    }
-}
-
 impl<'a, R: Read> DataReader<'a, R> {
+    /// Reads the next data event.
     pub fn read_event(&mut self) -> Result<DataEvent, Error> {
         if self.stack.is_empty() {
             if self.data_spec.is_compressed {
-                if self.current_subset_idx > 0 {
+                if self.current_subset_index > 0 {
                     return Ok(DataEvent::Eof);
                 }
-            } else if self.current_subset_idx == self.data_spec.number_of_subsets {
+            } else if self.current_subset_index == self.data_spec.number_of_subsets {
                 return Ok(DataEvent::Eof);
             }
 
             self.stack
                 .push(StackEntry::new_sequence(&self.data_spec.root_descriptors));
-            let subset_idx = self.current_subset_idx;
-            self.current_subset_idx += 1;
+            let subset_idx = self.current_subset_index;
+            self.current_subset_index += 1;
             if self.data_spec.is_compressed {
                 return Ok(DataEvent::CompressedStart);
             } else {

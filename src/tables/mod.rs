@@ -1,3 +1,5 @@
+//! The BUFR edition 4 tables
+
 pub mod local;
 mod table_b;
 mod table_c;
@@ -10,6 +12,7 @@ pub use table_d::*;
 use crate::{Descriptor, XY};
 use hashbrown::HashMap;
 
+/// Collection of BUFR tables (B, C, D).
 pub struct Tables {
     pub table_b: HashMap<XY, &'static TableBEntry>,
     pub table_c: HashMap<(u8, Option<u8>), &'static TableCEntry>,
@@ -26,6 +29,7 @@ impl Default for Tables {
     }
 }
 
+/// Entry in Table B (element descriptors).
 #[derive(Debug)]
 pub struct TableBEntry {
     pub xy: XY,
@@ -37,6 +41,7 @@ pub struct TableBEntry {
     pub bits: u16,
 }
 
+/// Entry in Table C (operator descriptors).
 #[derive(Debug)]
 pub struct TableCEntry {
     pub xy: (u8, Option<u8>),
@@ -44,6 +49,7 @@ pub struct TableCEntry {
     pub operation_definition: &'static str,
 }
 
+/// Entry in Table D (sequence descriptors).
 #[derive(Debug)]
 pub struct TableDEntry {
     pub xy: XY,
@@ -53,7 +59,7 @@ pub struct TableDEntry {
     pub elements: &'static [Descriptor],
 }
 
-/// Table B (f = 0)
+/// Table B (f = 0).
 fn make_table_b() -> HashMap<XY, &'static TableBEntry> {
     let mut map = HashMap::new();
     for entry in &table_b::TABLE_B {
@@ -62,7 +68,7 @@ fn make_table_b() -> HashMap<XY, &'static TableBEntry> {
     map
 }
 
-/// Table C (f = 2)
+/// Table C (f = 2).
 fn make_table_c() -> HashMap<(u8, Option<u8>), &'static TableCEntry> {
     let mut map = HashMap::new();
     for entry in &table_c::TABLE_C {
@@ -71,7 +77,7 @@ fn make_table_c() -> HashMap<(u8, Option<u8>), &'static TableCEntry> {
     map
 }
 
-/// Table D (f = 3)
+/// Table D (f = 3).
 fn make_table_d() -> HashMap<XY, &'static TableDEntry> {
     let mut map = HashMap::new();
     for entry in &table_d::TABLE_D {
