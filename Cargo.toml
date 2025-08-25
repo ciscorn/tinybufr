@@ -1,10 +1,10 @@
 [package]
 name = "tinybufr"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 description = "A decoder for BUFR meteorological data format"
-repository = "https://github.com/MIERUNE/tinybufr"
+repository = "https://github.com/ciscorn/tinybufr"
 exclude = ["BUFR4", ".github", ".gitignore", ".git", "target"]
 
 [dependencies]
